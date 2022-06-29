@@ -1,0 +1,33 @@
+# Colorize output
+alias diff='diff --color=auto'
+alias grep='grep --color=auto'
+alias ip='ip -color=auto'
+alias ls='ls --color=auto'
+
+# Regular aliases
+alias bc='bc -l'
+alias lh='ls -lh'
+alias lha='ls -lha'
+alias cp='cp -v'
+alias mv='mv -v'
+alias rm='rm -v'
+# Create directory named in the ISO 8601 format YYYYMMDDHHmm without separators
+alias mkdir_now='date +%Y%m%d%H%M | xargs mkdir'
+# Get week number
+alias week='date +%V'
+
+# Share current folder on HTTP
+# alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'
+alias webshare='python3 -m http.server'
+
+alias :q='echo This is not Vim you silly fool'
+alias :w='echo This is not Vim you silly fool'
+alias :wq='echo This is not Vim you silly fool'
+# alias pls='sudo $(history -p !!); history -d $((HISTCMD-1))'
+
+# OSC aliases
+alias isc='osc -A https://api.suse.de'
+alias oscb='osc build --ccache --cpio-bulk-download --download-api-only'
+
+# Quilt aliases
+alias quilts='quilt setup *.spec'

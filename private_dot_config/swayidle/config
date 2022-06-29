@@ -1,0 +1,7 @@
+# Autolock after 5 minutes (300 seconds)
+timeout 300 'swaylock'
+# Turn screen off after locking
+timeout 305 'swaymsg "output * dpms off"'
+resume 'swaymsg "output * dpms on"'
+after-resume 'swaymsg "output * enable"'
+before-sleep 'swaylock'

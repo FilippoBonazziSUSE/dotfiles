@@ -1,0 +1,29 @@
+[user]
+	name = Filippo Bonazzi
+	email = filippo.bonazzi@suse.com
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
+[grep]
+	lineNumber = true
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+[merge]
+	tool = meld
+[mergetool "meld"]
+	cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+[core]
+	editor = vim
+	pager = "less -eFiJM~ -j3"
+[alias]
+	shortgraph = "log --graph --oneline --all --decorate --topo-order"
+	graph = "log --graph --all --decorate --topo-order"
+	simplegraph = "log --graph --all --decorate --topo-order --simplify-by-decoration"
+	logstat = "log --stat"
+	stash-unapply = !git stash show -p | git apply -R
+	permission-reset = "!git diff -p | grep -E \"^(diff|old mode|new mode)\" | sed -e \"s/^old/NEW/;s/^new/old/;s/^NEW/new/\" | git apply"
