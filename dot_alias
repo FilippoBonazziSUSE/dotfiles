@@ -31,3 +31,10 @@ alias oscb='osc build --ccache --cpio-bulk-download --download-api-only'
 
 # Quilt aliases
 alias quilts='quilt setup *.spec'
+
+# Nvim aliases
+alias nview='nvim -R'
+
+# Vim aliases
+alias vim='nvim'
+alias view='nview'
