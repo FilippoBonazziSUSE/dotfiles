@@ -1,0 +1,96 @@
+* {
+    border:        none;
+    border-radius: 0;
+    font-family:   "Source Sans Pro";
+    font-size:     15px;
+    box-shadow:    none;
+    text-shadow:   none;
+    transition-duration: 0s;
+}
+
+window#waybar {
+    color: rgba(53, 185, 171, 1);
+    background-color: rgba(23, 63, 79, 0.4);
+    border-bottom: 2px solid rgba(53, 185, 171, 0.4);
+}
+
+window#waybar.solo {
+    color: rgba(53, 185, 171, 1);
+}
+
+#workspaces {
+    margin: 0 5px;
+}
+
+#workspaces button {
+    padding: 0 2px;
+    color: rgba(53, 185, 171, 1);
+}
+
+#workspaces button.focused {
+    color: rgba(115, 186, 37, 1);
+}
+
+#workspaces button.visible {
+    color: rgba(115, 186, 37, 1);
+}
+
+#workspaces button.urgent {
+    color: rgba(33, 164, 223, 1);
+}
+
+#mode,
+#tray,
+#battery,
+#cpu,
+#memory,
+#network,
+#bluetooth,
+#pulseaudio,
+#idle_inhibitor,
+#temperature,
+#custom-layout,
+#custom-zypper,
+#custom-scratchpad,
+#sway-language,
+#clock,
+#backlight {
+    margin: 0px 5px 0px 5px;
+/*    min-width: 30px;*/
+}
+
+#battery.warning {
+   color: rgba(255, 210, 4, 1);
+}
+
+#battery.critical {
+    color: rgba(238, 46, 36, 1);
+}
+
+#battery.charging {
+    color: rgba(217, 216, 216, 1);
+}
+
+#network.wifi.linked {
+    color: rgba(217, 216, 216, 1);
+}
+
+#network.VPN.disconnected {
+    color: rgba(238, 46, 36, 1);
+}
+
+#network.VPN.ethernet {
+    color: rgba(115, 186, 37, 1);
+}
+
+#bluetooth.disabled {
+    color: rgba(128, 128, 128, 1);
+}
+
+#bluetooth.off {
+    color: rgba(128, 128, 128, 1);
+}
+
+#bluetooth.connected {
+    color: rgba(115, 186, 37, 1);
+}
