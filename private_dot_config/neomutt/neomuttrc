@@ -1,0 +1,16 @@
+# Configuration file for neomuttrc
+
+# Accounts
+source ~/.config/neomutt/accounts/suse.de/config
+# folder-hook $folder 'source ~/.config/neomutt/accounts/suse.de/config'
+
+# General settings
+source ~/.config/neomutt/settings
+
+# Colors
+source ~/resources/mutt-gruvbox/colors-gruvbox-shuber.muttrc
+source ~/resources/mutt-gruvbox/colors-gruvbox-shuber-extended.muttrc
+
+# Keybindings
+source ~/.config/neomutt/keybindings
+

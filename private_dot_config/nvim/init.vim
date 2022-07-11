@@ -31,6 +31,9 @@ Plug 'lzap/vim-selinux'
 " LSP config
 Plug 'neovim/nvim-lspconfig'
 
+" neomutt syntax
+Plug 'neomutt/neomutt.vim'
+
 call plug#end()
 """""""""""""""""""""""""""""""""""""""
 

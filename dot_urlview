@@ -1,0 +1,12 @@
+###############################################################################
+# Urlview configuration file.
+# man urlview  <Man page>
+#
+# The defaults are shown here:
+#
+# REGEXP  (((https?|ftp|gopher)://|(mailto|file|news):)[^' \t<>"]+|(www|web|w3)\.[-a-z0-9.]+)[^' \t.,;<>"\):]
+# COMMAND url_handler.sh %s
+#
+REGEXP  (((https?)://|(file|news):)[^' \t<>"]+|(www|web|w3)\.[-a-z0-9.]+)[^' \t.,;<>"\):]
+COMMAND firefox --new-window %s
+
