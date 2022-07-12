@@ -6,12 +6,12 @@
     // "width": 1280, // Waybar width
     // "gtk-layer-shell": "false",
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
     "modules-right": ["tray", "custom/zypper", "custom/scratchpad", "network#wifi", "network#wired", "network#VPN", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "pulseaudio", "custom/layout", "sway/language", "clock#date", "clock"],
     "sway/mode": {
-        "format": "AAAAAAAA this is the mode {}",
-	"max-length": 50
+        "format": "{}",
+	"max-length": 80
     },
     "sway/workspaces": {
         "all-outputs": false,
