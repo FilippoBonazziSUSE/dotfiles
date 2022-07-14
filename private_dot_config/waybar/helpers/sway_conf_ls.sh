@@ -9,11 +9,8 @@ include_level=0
 
 sway_config_files=(
   "~/.sway/config"
-  #"~/.sway/config.d"
   "$XDG_CONFIG_HOME/sway/config"
-  #"$XDG_CONFIG_HOME/sway/config.d"
   "/etc/sway/config"
-  #"etc/sway/config.d"
 )
 
 
