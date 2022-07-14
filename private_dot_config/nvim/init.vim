@@ -8,8 +8,8 @@ endif
 
 " Run PlugInstall if there are missing plugins
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \| PlugInstall --sync | source $MYVIMRC
-\| endif
+      \| PlugInstall --sync | source $MYVIMRC
+      \| endif
 
 " Plugins
 call plug#begin()
@@ -31,6 +31,9 @@ Plug 'lzap/vim-selinux'
 " LSP config
 Plug 'neovim/nvim-lspconfig'
 
+" Sway syntax
+Plug 'jamespeapen/swayconfig.vim'
+
 " neomutt syntax
 Plug 'neomutt/neomutt.vim'
 
@@ -51,7 +54,7 @@ set mouse=a
 
 " Use true colors
 if (has("termguicolors"))
-	set termguicolors
+  set termguicolors
 endif
 
 " color scheme
@@ -64,9 +67,9 @@ colorscheme gruvbox-material
 " Set colorscheme to match
 " Add modified icon to inactive buffers
 let g:lightline = {
-	\	'colorscheme' : 'gruvbox_material',
-	\	'inactive': {'left': [['filename'], ['modified']]},
-	\ }
+      \	'colorscheme' : 'gruvbox_material',
+      \	'inactive': {'left': [['filename'], ['modified']]},
+      \ }
 " Do not show additional mode info outside of status line
 set noshowmode
 
