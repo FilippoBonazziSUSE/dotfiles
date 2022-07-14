@@ -128,4 +128,5 @@ trusted_prj=openSUSE:Tumbleweed security:SELinux SUSE:SLE-15:Update SUSE:SLE-15:
 
 [https://api.suse.de]
 user=fbonazzi
+sshkey=~/.ssh/id_ed25519.pub
 credentials_mgr_class=osc.credentials.KeyringCredentialsManager:keyring.backends.SecretService.Keyring
