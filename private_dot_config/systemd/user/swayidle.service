@@ -1,0 +1,10 @@
+[Unit]
+Description=swayidle
+
+[Service]
+ExecStart=swayidle -w
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
