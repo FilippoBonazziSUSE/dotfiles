@@ -1,16 +1,18 @@
 # HTML
+text/html; firefox %s
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
 text/plain; nvim %s
+text/markdown; nvim %s
 
 #PDFs
-application/pdf; /usr/bin/evince %s
+application/pdf; evince %s
 
 #Images
-image/gif; /usr/bin/imv %s
-image/GIF; /usr/bin/imv %s
-image/png; /usr/bin/imv %s
-image/PNG; /usr/bin/imv %s
-image/jpg; /usr/bin/imv %s
-image/JPG; /usr/bin/imv %s
-image/jpeg; /usr/bin/imv %s
-image/JPEG; /usr/bin/imv %s
+image/gif; imv %s
+image/GIF; imv %s
+image/png; imv %s
+image/PNG; imv %s
+image/jpg; imv %s
+image/JPG; imv %s
+image/jpeg; imv %s
+image/JPEG; imv %s
