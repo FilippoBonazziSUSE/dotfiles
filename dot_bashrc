@@ -33,37 +33,37 @@ shopt -s histverify
 # Override the cd builtin to do some nice things
 function cd
 {
-        # If no arguments (change to ~)
-        if [[ $# -eq 0 ]]
-        then
-                # If we are in a repo and we are not already in the root change to the repo root
-                local repo="$(git rev-parse --show-toplevel 2>/dev/null)"
-                if [[ -n "$repo" && "$PWD" != "$repo" ]]
-                then
-                        builtin cd $repo
-                else
-                        builtin cd "$@"
-                fi
-        else
-                builtin cd "$@"
-        fi
-        if [[ $? -eq 0 ]]
-        then
-                # Print last commit message if we come from outside a git repo
-                if git rev-parse --show-toplevel &>/dev/null
-                then
-                        if ! [[ "$OLDPWD" == "$(git rev-parse --show-toplevel)"* ]]
-                        then
-                                echo "Last local commit:"
-                                git log -1
-                        fi
-                fi
-        fi
+  # If no arguments (change to ~)
+  if [[ $# -eq 0 ]]
+  then
+    # If we are in a repo and we are not already in the root change to the repo root
+    local repo="$(git rev-parse --show-toplevel 2>/dev/null)"
+    if [[ -n "$repo" && "$PWD" != "$repo" ]]
+    then
+      builtin cd "$repo"
+    else
+      builtin cd "$@"
+    fi
+  else
+    builtin cd "$@"
+  fi
+  if [[ $? -eq 0 ]]
+  then
+    # Print last commit message if we come from outside a git repo
+    if git rev-parse --show-toplevel &>/dev/null
+    then
+      if ! [[ "$OLDPWD" == "$(git rev-parse --show-toplevel)"* ]]
+      then
+        echo "Last local commit:"
+        git log -1
+      fi
+    fi
+  fi
 }
 
 function mkcd
 {
-        mkdir -p "$@" && cd "$@"
+  mkdir -p "$@" && cd "$@"
 }
 
 # Open vim pointing at a specific line in the file
@@ -71,12 +71,12 @@ function vim
 {
   # If no arguments, more than one argument, or the filename
   # does not contain a line number, pass through to VIM
-        if [[ $# -eq 0 || $# -gt 1 || ! "$1" =~ ^.*:[0-9]+$ ]]
-        then
+  if [[ $# -eq 0 || $# -gt 1 || ! "$1" =~ ^.*:[0-9]+$ ]]
+  then
     command vim "$@"
   else
     lineno="${1##*:}"
-    filename="${1%:$lineno}"
+    filename="${1%:"$lineno"}"
     command vim +"$lineno" -c "normal zt" "$filename"
   fi
 }
