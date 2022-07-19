@@ -1,5 +1,4 @@
 " Auto-install vim-plug
-
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -36,6 +35,15 @@ Plug 'jamespeapen/swayconfig.vim'
 
 " neomutt syntax
 Plug 'neomutt/neomutt.vim'
+
+" Trouble list
+Plug 'folke/trouble.nvim'
+
+" LSP auto colors
+Plug 'folke/lsp-colors.nvim'
+
+" Surround
+Plug 'tpope/vim-surround'
 
 call plug#end()
 """""""""""""""""""""""""""""""""""""""
@@ -105,6 +113,9 @@ set lbr
 
 " LSP config
 lua require'lspconfig'.clangd.setup{}
+lua require'lspconfig'.bashls.setup{}
+lua require'lspconfig'.vimls.setup{}
+lua require'lspconfig'.remark_ls.setup{}
 " LSP mappings (the mappings used in the default file don't quite work right)
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
