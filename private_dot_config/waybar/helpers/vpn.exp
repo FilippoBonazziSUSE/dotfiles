@@ -1,0 +1,21 @@
+#!/usr/bin/expect -f
+
+set network ""
+
+if {[llength $argv] == 0} {
+	set network [exec sh -c "nmcli connection show | grep vpn | sed 's/\\s\\+/\\t/g' | cut -f1"]
+} else {
+	set network [lindex $argv 0]
+}
+
+set uuid [exec sh -c "nmcli connection show | grep $network | sed 's/\\s\\+/\\t/g' | cut -f2"]
+
+set pass [exec secret-tool lookup setting-name vpn connection-uuid "$uuid"]
+
+spawn nmcli connection up --ask "$network"
+
+expect {
+	"Password (vpn.secrets.password):" { send "$pass\r"; exp_continue}
+	"•" {exp_continue}
+	eof
+}

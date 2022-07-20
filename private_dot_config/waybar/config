@@ -145,7 +145,7 @@
         "format-disconnected": "",
 	"tooltip-format": "{ifname} {ipaddr}",
 	"tooltip-format-disconnected": "Disconnected",
-	"on-click": "bash ~/.config/waybar/helpers/toggle_vpn.sh SUSE-UDP-NUE-NM_setting",
+	"on-click": "bash ~/.config/waybar/helpers/toggle_vpn.sh",
 	"interval": 5
     },
     "bluetooth": {
