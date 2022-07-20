@@ -23,6 +23,7 @@ alias webshare='python3 -m http.server'
 alias :q='echo This is not Vim you silly fool'
 alias :w='echo This is not Vim you silly fool'
 alias :wq='echo This is not Vim you silly fool'
+alias sl="ls | rev"
 # alias pls='sudo $(history -p !!); history -d $((HISTCMD-1))'
 
 # OSC aliases
