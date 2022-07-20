@@ -127,7 +127,7 @@
         "format-disconnected": "",
 	"tooltip-format": "{ifname} {essid} ({signalStrength}%)",
 	"tooltip-format-disconnected": "Airplane mode",
-	"on-click": "bash ~/.config/waybar/helpers/toggle_wifi.sh",
+	"on-click": "bash ~/.config/waybar/helpers/toggle_wifi.sh; pkill -SIGRTMIN+8 waybar",
 	"interval": 5
     },
     "network#wired": {
@@ -145,7 +145,7 @@
         "format-disconnected": "",
 	"tooltip-format": "{ifname} {ipaddr}",
 	"tooltip-format-disconnected": "Disconnected",
-	"on-click": "bash ~/.config/waybar/helpers/toggle_vpn.sh",
+	"on-click": "bash ~/.config/waybar/helpers/toggle_vpn.sh; pkill -SIGRTMIN+8 waybar",
 	"interval": 5
     },
     "bluetooth": {
