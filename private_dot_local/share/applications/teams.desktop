@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Microsoft Teams
+StartupWMClass=Teams
+Comment=Microsoft Teams web application
+GenericName=Teams Web Client for Linux
+Exec=google-chrome --app=https://teams.microsoft.com/_#/calendarv2
+Icon=teams.svg
+Type=Application
+StartupNotify=true
+Categories=Network;InstantMessaging;
+MimeType=x-scheme-handler/teams;
