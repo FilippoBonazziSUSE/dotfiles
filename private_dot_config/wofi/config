@@ -1,0 +1,10 @@
+# vim: filetype=dosini
+style=/etc/wofi/style.css
+width=800
+height=400
+insensitive=true
+mode=drun,run
+allow_images=true
+allow_markup=true
+gtk_dark=true
+key_expand=Control_L-space
