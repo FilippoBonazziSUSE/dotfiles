@@ -67,4 +67,4 @@ bind index,pager b noop
 bind index,pager B bounce-message
 #
 # Move message to Junk
-macro index,pager X ":echo 'Moving to Junk'\n:set confirmappend=no delete=yes\n<tag-prefix><save-message>=INBOX/Junk\n:set confirmappend=yes delete=ask-yes\n:echo'Moved to Junk'\n" "Move to Junk"
+macro index,pager X ":echo 'Moving to Junk'\n:set confirmappend=no delete=yes\n<tag-prefix><save-message>=INBOX/Junk\n:set confirmappend=yes delete=ask-yes\n:echo 'Moved to Junk'\n" "Move to Junk"
