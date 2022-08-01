@@ -98,3 +98,6 @@ ignore *
 # I do want to see these fields, though!
 unignore from date subject to cc reply-to
 #unignore resent- x-resent
+
+# Auto decrypt traditional PGP messages
+set pgp_auto_decode
