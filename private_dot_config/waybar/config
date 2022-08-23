@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["tray", "custom/zypper", "custom/scratchpad", "network#wifi", "network#wired", "network#VPN", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "pulseaudio", "custom/layout", "sway/language", "clock#date", "clock"],
+    "modules-right": ["tray", "custom/zypper", "custom/npm", "custom/scratchpad", "network#wifi", "network#wired", "network#VPN", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "pulseaudio", "custom/layout", "sway/language", "clock#date", "clock", "custom/notification"],
     "sway/mode": {
         "format": "{}",
 	"max-length": 80
@@ -28,11 +28,19 @@
         "tooltip": false
     },
     "custom/zypper": {
-        "format": "{} ",
+        "format": "<span foreground='red'><small><sup>⬤</sup></small></span>",
         "interval": 300,
-        "exec": "zypper -n lu | grep 'v |' | wc -l; echo 'packages to update'",
-        "exec-if": "exit 0",
-        "on-click": "exec alacritty -e sudo sh -c 'zypper ref; zypper dup; pkill -SIGRTMIN+8 waybar'",
+        "exec": "bash ~/.config/waybar/helpers/zypper.sh",
+        "exec-if": "bash ~/.config/waybar/helpers/zypper.sh",
+        "on-click": "exec alacritty -e sh -c 'sudo zypper dup; pkill -SIGRTMIN+8 waybar'",
+        "signal": 8
+    },
+    "custom/npm": {
+        "format": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+        "interval": 300,
+        "exec": "bash ~/.config/waybar/helpers/npm.sh",
+        "exec-if": "bash ~/.config/waybar/helpers/npm.sh",
+        "on-click": "exec alacritty -e sh -c 'npm update -ga; pkill -SIGRTMIN+8 waybar'",
         "signal": 8
     },
     // Modules configuration
@@ -191,10 +199,26 @@
     "custom/scratchpad": {
         "format-text": "{}",
         "return-type": "json",
-        "interval": 3,
+        "interval": 1,
         "exec": "bash ~/.config/waybar/helpers/scratchpad-indicator.sh 2> /dev/null",
         "exec-if": "exit 0",
         "on-click": "swaymsg 'scratchpad show'",
         "on-click-right": "swaymsg 'move scratchpad'"
-    }
+    },
+    "custom/notification": {
+	"tooltip": true,
+	"format": "{}{icon}",
+	"format-icons": {
+	     "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+	     "none": " ",
+	     "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+	     "dnd-none": " "
+	},
+	"return-type": "json",
+	"exec-if": "which swaync-client",
+	"exec": "swaync-client -swb",
+	"on-click": "swaync-client -t -sw",
+	"on-click-right": "swaync-client -d -sw",
+	"escape": true
+   }
 }
