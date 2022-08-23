@@ -1,5 +1,6 @@
 @define-color cc-bg rgba(23, 63, 79, 0.4);
 
+@define-color noti-text-color rgba(53, 185, 171, 1);
 @define-color noti-border-color rgba(53, 185, 171, 0.4);
 @define-color noti-bg rgba(23, 63, 79, 0.4);
 @define-color noti-bg-hover rgba(23, 63, 79, 1);
@@ -8,6 +9,11 @@
 @define-color noti-close-bg-hover rgba(255, 255, 255, 0.15);
 
 @define-color bg-selected rgba(33, 164, 223, 1);
+
+* {
+    font-family: "Source Sans Pro";
+    font-size:   15px;
+}
 
 .notification-row {
   outline: none;
@@ -60,7 +66,7 @@
 
 .close-button {
   background: @noti-close-bg;
-  color: white;
+  color: @noti-text-color;
   text-shadow: none;
   padding: 0;
   border-radius: 100%;
@@ -131,32 +137,32 @@
 }
 
 .summary {
-  color: white;
+  color: @noti-text-color;
   text-shadow: none;
 }
 
 .time {
-  color: white;
+  color: @noti-text-color;
   text-shadow: none;
   margin-right: 18px;
 }
 
 .body {
   background: transparent;
-  color: white;
+  color: @noti-text-color;
   text-shadow: none;
 }
 
 /* The "Notifications" and "Do Not Disturb" text widget */
 .top-action-title {
-  color: white;
+  color: @noti-text-color;
   text-shadow: none;
 }
 
 .control-center-clear-all {
-  color: white;
+  color: @noti-text-color;
   text-shadow: none;
-  background: @noti-bg;
+  background: @cc-bg;
   border: 1px solid @noti-border-color;
   box-shadow: none;
   border-radius: 12px;
