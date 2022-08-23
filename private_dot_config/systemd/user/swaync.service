@@ -1,0 +1,10 @@
+[Unit]
+Description=swaync
+
+[Service]
+ExecStart=swaync
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
