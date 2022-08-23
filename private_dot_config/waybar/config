@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["tray", "custom/zypper", "custom/npm", "custom/scratchpad", "network#wifi", "network#wired", "network#VPN", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "pulseaudio", "custom/layout", "sway/language", "clock#date", "clock", "custom/notification"],
+    "modules-right": ["tray", "custom/zypper", "custom/npm", "custom/fwupd", "custom/scratchpad", "network#wifi", "network#wired", "network#VPN", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "pulseaudio", "custom/layout", "sway/language", "clock#date", "clock", "custom/notification"],
     "sway/mode": {
         "format": "{}",
 	"max-length": 80
@@ -41,6 +41,14 @@
         "exec": "bash ~/.config/waybar/helpers/npm.sh",
         "exec-if": "bash ~/.config/waybar/helpers/npm.sh",
         "on-click": "exec alacritty -e sh -c 'npm update -ga; pkill -SIGRTMIN+8 waybar'",
+        "signal": 8
+    },
+    "custom/fwupd": {
+        "format": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+        "interval": 3600,
+        "exec": "bash ~/.config/waybar/helpers/fwupd.sh",
+        "exec-if": "bash ~/.config/waybar/helpers/fwupd.sh",
+        "on-click": "exec alacritty -e sh -c 'sudo fwupdmgr update; pkill -SIGRTMIN+8 waybar'",
         "signal": 8
     },
     // Modules configuration
