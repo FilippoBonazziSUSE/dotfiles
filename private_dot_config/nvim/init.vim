@@ -36,6 +36,12 @@ Plug 'jamespeapen/swayconfig.vim'
 " neomutt syntax
 Plug 'neomutt/neomutt.vim'
 
+" CSS syntax
+Plug 'amadeus/vim-css'
+
+" CSS colors
+Plug 'brenoprata10/nvim-highlight-colors'
+
 " Trouble list
 Plug 'folke/trouble.nvim'
 
@@ -64,6 +70,9 @@ set mouse=a
 if (has("termguicolors"))
   set termguicolors
 endif
+
+" Highlight colors in all filetypes
+lua require('nvim-highlight-colors').setup {render = 'background'}
 
 " color scheme
 colorscheme gruvbox-material
