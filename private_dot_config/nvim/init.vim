@@ -134,3 +134,28 @@ nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+
+function! s:get_visual_selection()
+    " Why is this not a built-in Vim script function?!
+    if mode() == "v"
+      let [line_start, column_start] = getpos("v")[1:2]
+      let [line_end, column_end] = getpos(".")[1:2]
+    else
+      let [line_start, column_start] = getpos("'<")[1:2]
+      let [line_end, column_end] = getpos("'>")[1:2]
+    endif
+    let lines = getline(line_start, line_end)
+    if len(lines) == 0
+        return ''
+    endif
+    let lines[-1] = lines[-1][: column_end - (&selection == 'inclusive' ? 1 : 2)]
+    let lines[0] = lines[0][column_start - 1:]
+    return join(lines, "\n")
+endfunction
+
+" Auto copy visual selection to primary clipboard
+augroup visual_clipboard
+  autocmd!
+  autocmd ModeChanged *:[vV\x16]* let @* = s:get_visual_selection()
+  autocmd ModeChanged [vV\x16]*:* let @* = s:get_visual_selection()
+augroup END
