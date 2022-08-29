@@ -1,4 +1,5 @@
 timeout 300 'loginctl lock-session'
 timeout 5 'pgrep swaylock && swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
 before-sleep 'loginctl lock-session'
-lock 'swaylock'
+lock 'swaylock; loginctl unlock-session'
+unlock 'secret-tool search --unlock key value'
