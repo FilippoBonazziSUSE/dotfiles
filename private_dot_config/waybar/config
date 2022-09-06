@@ -181,7 +181,7 @@
 	"on-click-right": "exec alacritty -e sh -c 'bluetoothctl'"
     },
     "pulseaudio": {
-        "format": "{volume} {icon}",
+        "format": "{volume}% {icon}",
         // "format-alt": "{volume} {icon}",
         // "format-alt-click": "click-right",
         "format-muted": "",
