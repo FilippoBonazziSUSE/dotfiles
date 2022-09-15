@@ -1,0 +1,29 @@
+# vim: filetype=zsh
+# Override the cd builtin to do some nice things
+
+# If no arguments (change to ~)
+if [[ $# -eq 0 ]]
+then
+  # If we are in a repo and we are not already in the root change to the repo root
+  local repo="$(git rev-parse --show-toplevel 2>/dev/null)"
+  if [[ -n "$repo" && "$PWD" != "$repo" ]]
+  then
+    builtin cd $repo
+  else
+    builtin cd "$@"
+  fi
+else
+  builtin cd "$@"
+fi
+if [[ $? -eq 0 ]]
+then
+  # Print last commit message if we come from outside a git repo
+  if git rev-parse --show-toplevel &>/dev/null
+  then
+    if ! [[ "$OLDPWD" == "$(git rev-parse --show-toplevel)"* ]]
+    then
+      echo "Last local commit:"
+      git log -1
+    fi
+  fi
+fi

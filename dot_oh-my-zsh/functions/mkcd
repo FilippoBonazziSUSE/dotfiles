@@ -1,0 +1,3 @@
+# vim: filetype=zsh
+
+mkdir -p "$@" && cd "$@"
