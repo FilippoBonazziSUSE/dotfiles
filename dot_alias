@@ -30,9 +30,6 @@ alias sl="ls | rev"
 alias isc='osc -A https://api.suse.de'
 alias oscb='osc build --ccache --cpio-bulk-download --download-api-only'
 
-# Quilt aliases
-alias quilts='quilt setup *.spec'
-
 # Nvim aliases
 alias nview='nvim -R'
 

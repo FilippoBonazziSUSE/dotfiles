@@ -1,0 +1,47 @@
+quilts () {
+        verbose=''
+        if [ "$1" = "-v" ]
+        then
+                verbose='1'
+        fi
+        if [ -e "$1" ]
+        then
+                echo "using spec file $1"
+                quilt setup $1
+        else
+                if [[ `ls -1 *.spec | wc -l` -gt 1 ]]
+                then
+                        echo "more than one spec file"
+                        z_ls *.spec
+                        shortest_spec=`ls -1 *.spec | awk '{print length, $0}' | sort -nr | tail -n1 | cut --fields=2- -d' '`
+                        echo -n "use $shortest_spec (Y/n): "
+                        read answer
+                        if [[ -z $answer ]] || [[ $answer = 'y' ]]
+                        then
+                                if [ -z $verbose ]
+                                then
+                                        quilt setup *.spec
+                                else
+                                        echo verbose a${verbose}a
+                                        quilt setup -v *.spec
+                                fi
+                        fi
+                else
+                        if [ -z $verbose ]
+                        then
+                                quilt setup *.spec
+                        else
+                                echo verbose a${verbose}a
+                                quilt setup -v *.spec
+                        fi
+                fi
+        fi
+        if cd *(/)
+        then
+                quilt push -a
+                ctags -R .
+                find . -type d \( -path ./.pc -o -path patches \) -prune -o -name '*.c' -print -o -name '*.h' -print | cscope -b -i-
+        else
+                echo -e "\nWARNING: Could not change to dir. Apply patches manually\n"
+        fi
+}
