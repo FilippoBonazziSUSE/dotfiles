@@ -1,0 +1,19 @@
+# Color text formatting
+color body underline color229 color234 '\<_[^_]+_\>'
+
+# Color some part of markdown
+color body color108 color234 '`[^\`]+`'
+color body color108 color234 '`{3}[^\`]+`{3}'
+color body color108 color234 '^`{3}.*$'
+
+# Highlight my name
+color body standout color108 color234 "@?Filippo"
+
+# Color text that looks like a diff
+color body brightwhite color234 "^(\>\ )*diff \-.*"
+color body brightwhite color234 "^(\>\ )*index [a-f0-9].*"
+color body brightwhite color234 "^\(\>\ )*\-\-\- .*"
+color body brightwhite color234 "^(\>\ )*[\+]{3} .*"
+color body color142    color234 "^(\>\ )*[\+][^\+].*"
+color body color167    color234 "^(\>\ )*[\-][^\-].*"
+color body color109    color234 "^(\>\ )*@@ .*@@"
