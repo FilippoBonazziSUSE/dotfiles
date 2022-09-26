@@ -10,6 +10,7 @@ source ~/.config/neomutt/settings
 # Colors
 source ~/resources/mutt-gruvbox/colors-gruvbox-shuber.muttrc
 source ~/resources/mutt-gruvbox/colors-gruvbox-shuber-extended.muttrc
+source ~/.config/neomutt/patch_colors.muttrc
 
 # Keybindings
 source ~/.config/neomutt/keybindings
