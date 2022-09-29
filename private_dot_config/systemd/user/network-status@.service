@@ -1,0 +1,7 @@
+[Unit]
+Description=Detect network status
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "nmcli connection show --active | grep %i"
+RemainAfterExit=no

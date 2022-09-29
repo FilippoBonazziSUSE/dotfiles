@@ -1,0 +1,13 @@
+[Unit]
+Description=Mailbox synchronization service
+Requires=network-status@fbonazzi.SUSE-UDP-NUE-NM_setting.service
+Requires=secrets-status@-org-freedesktop-secrets-collection-Passwords.service
+After=network-status@fbonazzi.SUSE-UDP-NUE-NM_setting.service
+After=secrets-status@-org-freedesktop-secrets-collection-Passwords.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mbsync -c $MBSYNCRC -Va
+
+[Install]
+WantedBy=default.target
