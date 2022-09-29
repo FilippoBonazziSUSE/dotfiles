@@ -30,7 +30,6 @@ bind pager,index                dd  delete-message
 
 # Mail & Reply
 bind index			<Return> display-message
-bind index			<Right> display-message
 bind index			x	toggle-new
 bind index,pager                \Cr	list-reply
 bind index,pager                R	group-reply
@@ -39,6 +38,10 @@ bind index,pager		\Cm	compose-to-sender
 # Attachments list
 bind attach <Left> exit
 bind attach <Right> view-text
+
+## Make quick html view macro
+bind index,pager V  noop        ## Unbinds V from version
+macro index,pager V "<view-attachments><search>html<enter><view-mailcap><exit>"
 
 # Threads
 bind browser,pager,index        N   search-opposite
@@ -65,6 +68,8 @@ bind index,pager L		sidebar-open
 # Remap bounce-message function to “B”
 bind index,pager b noop
 bind index,pager B bounce-message
-#
+
+macro index,pager b |urlview\n
+
 # Move message to Junk
-macro index,pager X ":echo 'Moving to Junk'\n:set confirmappend=no delete=yes\n<tag-prefix><save-message>=INBOX/Junk\n:set confirmappend=yes delete=ask-yes\n:echo 'Moved to Junk'\n" "Move to Junk"
+macro index,pager X ":echo 'Moving to Junk'\n:set confirmappend=no delete=yes\n<tag-prefix><save-message>=Junk\n:set confirmappend=yes delete=ask-yes\n:echo 'Moved to Junk'\n" "Move to Junk"

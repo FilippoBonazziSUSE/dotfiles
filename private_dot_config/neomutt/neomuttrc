@@ -1,7 +1,7 @@
 # Configuration file for neomuttrc
 
 # Accounts
-source ~/.config/neomutt/accounts/suse.de/config
+source ~/.config/neomutt/accounts/suse.de/config-offline
 # folder-hook $folder 'source ~/.config/neomutt/accounts/suse.de/config'
 
 # General settings
