@@ -51,6 +51,9 @@ Plug 'folke/lsp-colors.nvim'
 " Surround
 Plug 'tpope/vim-surround'
 
+" mbsync configuration syntax
+Plug 'Fymyte/mbsync.vim'
+
 call plug#end()
 """""""""""""""""""""""""""""""""""""""
 
