@@ -124,10 +124,10 @@ set wildmode=longest,list,full
 set lbr
 
 " LSP config
-lua require'lspconfig'.clangd.setup{}
-lua require'lspconfig'.bashls.setup{}
-lua require'lspconfig'.vimls.setup{}
-lua require'lspconfig'.remark_ls.setup{}
+lua require('lspconfig').clangd.setup{}
+lua require('lspconfig').bashls.setup{}
+lua require('lspconfig').vimls.setup{}
+lua require('lspconfig').remark_ls.setup{}
 " LSP mappings (the mappings used in the default file don't quite work right)
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
@@ -137,6 +137,9 @@ nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+
+" PYLSP setup
+lua require('lspconfig').pylsp.setup {settings = {pylsp = {plugins = {autopep8 = {enabled = false}, yapf = {enabled = true}}}}}
 
 com! CheckHighlightUnderCursor echo {l,c,n ->
         \   'hi<'    . synIDattr(synID(l, c, 1), n)             . '> '
