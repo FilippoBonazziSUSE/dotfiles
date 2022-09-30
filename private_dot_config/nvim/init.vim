@@ -171,3 +171,6 @@ augroup visual_clipboard
   autocmd ModeChanged *:[vV\x16]* let @* = s:get_visual_selection()
   autocmd ModeChanged [vV\x16]*:* let @* = s:get_visual_selection()
 augroup END
+
+" Show all whitespace with :set list
+set listchars=eol:¬,tab:-->,trail:~,extends:>,precedes:<,space:␣
