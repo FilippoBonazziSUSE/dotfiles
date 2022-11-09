@@ -8,6 +8,7 @@ After=secrets-status@-org-freedesktop-secrets-collection-Passwords.service
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/mbsync -c $MBSYNCRC -Va
+ExecStartPost=/usr/bin/notmuch new
 
 [Install]
 WantedBy=default.target
