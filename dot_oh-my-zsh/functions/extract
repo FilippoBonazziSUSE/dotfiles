@@ -16,6 +16,7 @@ if [ -f $1 ] ; then
     *.zip)       unzip $1     ;;
     *.Z)         uncompress $1;;
     *.7z)        7z x $1      ;;
+    *.rpm)       mkdir "${1%.*}" && rpm2cpio "$1" | cpio -D "${1%.*}" -idmv;;
     *)           echo "'$1' cannot be extracted via extract()" ;;
   esac
 else
