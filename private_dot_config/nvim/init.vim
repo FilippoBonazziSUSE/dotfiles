@@ -51,6 +51,15 @@ Plug 'folke/lsp-colors.nvim'
 " Surround
 Plug 'tpope/vim-surround'
 
+" Commentary
+Plug 'tpope/vim-commentary'
+
+" speeddating
+Plug 'tpope/vim-speeddating'
+
+" Sleuth
+Plug 'tpope/vim-sleuth'
+
 " mbsync configuration syntax
 Plug 'Fymyte/mbsync.vim'
 
@@ -127,7 +136,8 @@ set lbr
 lua require('lspconfig').clangd.setup{}
 lua require('lspconfig').bashls.setup{}
 lua require('lspconfig').vimls.setup{}
-lua require('lspconfig').remark_ls.setup{}
+" Broken right now due to missing remark
+" lua require('lspconfig').remark_ls.setup{}
 " LSP mappings (the mappings used in the default file don't quite work right)
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
