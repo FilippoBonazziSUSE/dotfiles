@@ -36,3 +36,6 @@ alias nview='nvim -R'
 # Vim aliases
 alias vim='nvim'
 alias view='nview'
+## Vim aliases for OBS
+alias vimc='vim *.changes'
+alias vims='vim *.spec'
