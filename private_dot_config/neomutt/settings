@@ -29,7 +29,12 @@ set text_flowed
 # unset help                           # No help bar at the top of index
 set tmpdir = ~/.local/share/neomutt/temp # where to keep temp files
 
-set quit                 # don't ask, just do!!
+# don't ask, just do!!
+set quit
+set confirm_append = no
+set delete = yes
+set wait_key = no
+
 unset mark_old           # read/new is good enough for me
 # set beep_new             # bell on new mails
 set pipe_decode          # strip headers and eval mimes when piping
@@ -51,14 +56,15 @@ set mail_check_stats
 
 # Index
 # Default: %4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s
-set index_format="%4C %Z %<[d?%[Today      %R]&%[%F %R]> %-20.20L %?M?(#%03M)&(%4l)? %s"
+set index_format="%4C %Z %<[d?%[Today      %R]&%[%F %R]> %-20.20F %?M?(#%03M)&(%4l)? %s"
 
 # status bar, date format, finding stuff etc.
 # Don't show '-' on an unmodified mailbox
 set status_chars = " *%A"
-set status_format = "[%f (%l)] [%r]%>─%?p? (%p ✍)?%?F? (%F ⚑)?%?d? (%d ♻)?%?t? (%t ☖)? %n/%m %P"
+set status_format = "[%f (%l)] %?V?[𝑓=%V] ?[%s] [%r]%>─%?p? (%p ✍)?%?F? (%F ⚑)?%?d? (%d ♻)?%?t? (%t ☖)? %n/%m %P"
 #set date_format = "%d.%m.%Y %H:%M"
-set sort = threads
+set use_threads = threads
+set sort = last-date
 #set sort_aux = reverse-last-date-received
 #set uncollapse_jump
 #set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"

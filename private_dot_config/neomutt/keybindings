@@ -71,5 +71,8 @@ bind index,pager B bounce-message
 
 macro index,pager b |urlview\n
 
-# Move message to Junk
-macro index,pager X ":echo 'Moving to Junk'\n:set confirmappend=no delete=yes\n<tag-prefix><save-message>=Junk\n:set confirmappend=yes delete=ask-yes\n:echo 'Moved to Junk'\n" "Move to Junk"
+# Move message to Spam
+macro index,pager X "<tag-prefix><save-message>=Spam\n:echo 'Moved to Spam'\n" "Move to Spam"
+
+# Get new mail right now
+macro index,pager <esc>s "<shell-escape>systemctl --user start mbsync.service &<enter>" "Get new mail now"
