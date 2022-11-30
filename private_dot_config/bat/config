@@ -1,0 +1,9 @@
+# Set theme
+--theme="gruvbox-dark"
+
+# Set style
+--style="numbers,changes,grid,snip"
+
+# Add custom syntax
+--map-syntax "*.pmdwn:Markdown"
+--map-syntax "oscrc:INI"

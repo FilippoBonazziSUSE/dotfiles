@@ -11,6 +11,7 @@ alias lha='ls -lha'
 alias cp='cp -v'
 alias mv='mv -v'
 alias rm='rm -v'
+alias less='less -F'
 # Create directory named in the ISO 8601 format YYYYMMDDHHmm without separators
 alias mkdir_now='date +%Y%m%d%H%M | xargs mkdir'
 # Get week number
@@ -39,3 +40,6 @@ alias view='nview'
 ## Vim aliases for OBS
 alias vimc='vim *.changes'
 alias vims='vim *.spec'
+
+# cat alias
+alias cat='bat --plain --paging=never'
