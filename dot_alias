@@ -30,6 +30,7 @@ alias sl="ls | rev"
 # OSC aliases
 alias isc='osc -A https://api.suse.de'
 alias oscb='osc build --ccache --cpio-bulk-download --download-api-only'
+alias oscsh='TERM=xterm-256color osc shell'
 
 # Nvim aliases
 alias nview='nvim -R'
