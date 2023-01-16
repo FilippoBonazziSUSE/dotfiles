@@ -1,0 +1,31 @@
+IMAPAccount suse.de
+# Address to connect to
+Host <host>
+User <user>
+# Retrieve the password using the Secret Service
+PassCmd "secret-tool lookup user <user> domain <host>"
+# Use SSL
+SSLType IMAPS
+
+IMAPStore suse.de-remote
+Account suse.de
+
+MaildirStore suse.de-local
+SubFolders Verbatim
+# The trailing "/" is important
+Path ~/Mail/suse.de/
+INBOX ~/Mail/suse.de/INBOX
+
+Channel suse.de
+Far :suse.de-remote:
+Near :suse.de-local:
+# Include everything
+Patterns *
+# Automatically create missing mailboxes, both locally and on the server
+Create Both
+# Automatically remove deleted mailboxes, both locally and on the server
+Remove Both
+# Sync the movement of messages between folders and deletions, add after making sure the sync works
+Expunge Both
+# Save the synchronization state files in the relevant directory
+SyncState *
