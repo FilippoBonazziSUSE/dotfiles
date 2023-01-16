@@ -35,7 +35,6 @@ set confirm_append = no
 set delete = yes
 set wait_key = no
 
-unset mark_old           # read/new is good enough for me
 # set beep_new             # bell on new mails
 set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
