@@ -60,7 +60,7 @@ set index_format="%4C %Z %<[d?%[Today      %R]&%[%F %R]> %-20.20F %?M?(#%03M)&(%
 # status bar, date format, finding stuff etc.
 # Don't show '-' on an unmodified mailbox
 set status_chars = " *%A"
-set status_format = "[%f (%l)] %?V?[𝑓=%V] ?[%s] [%r]%>─%?p? (%p ✍)?%?F? (%F ⚑)?%?d? (%d ♻)?%?t? (%t ☖)? %n/%m %P"
+set status_format = "[%f (%l)] %?V?[𝑓=%V (%M)] ?[%s] [%r]%>─%?p? (%p ✍)?%?F? (%F ⚑)?%?d? (%d ♻)?%?t? (%t ☖)? %n/%m %P"
 #set date_format = "%d.%m.%Y %H:%M"
 set use_threads = threads
 set sort = last-date
