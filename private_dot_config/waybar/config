@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["tray", "custom/zypper", "custom/npm", "custom/fwupd", "custom/scratchpad", "network#wifi", "network#wired", "network#VPN", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "pulseaudio", "idle_inhibitor", "sway/language", "clock#date", "clock", "custom/notification"],
+    "modules-right": ["tray", "custom/zypper", "custom/npm", "custom/flatpak", "custom/fwupd", "custom/scratchpad", "network#wifi", "network#wired", "network#VPN", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "pulseaudio", "idle_inhibitor", "sway/language", "clock#date", "clock", "custom/notification"],
     "sway/mode": {
         "format": "{}",
 	"max-length": 80
@@ -33,6 +33,14 @@
         "exec": "bash ~/.config/waybar/helpers/zypper.sh",
         "exec-if": "bash ~/.config/waybar/helpers/zypper.sh",
         "on-click": "exec alacritty -e sh -c 'sudo zypper dup; pkill -SIGRTMIN+8 waybar'",
+        "signal": 8
+    },
+    "custom/flatpak": {
+        "format": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+        "interval": 300,
+        "exec": "bash ~/.config/waybar/helpers/flatpak.sh",
+        "exec-if": "bash ~/.config/waybar/helpers/flatpak.sh",
+        "on-click": "exec alacritty -e sh -c 'flatpak update --noninteractive; pkill -SIGRTMIN+8 waybar'",
         "signal": 8
     },
     "custom/npm": {
