@@ -5,6 +5,11 @@
 	default = simple
 [core]
 	excludesfile = ~/.gitignore
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
 [grep]
 	lineNumber = true
 [diff]
@@ -27,3 +32,5 @@
 	logstat = "log --stat"
 	stash-unapply = !git stash show -p | git apply -R
 	permission-reset = "!git diff -p | grep -E \"^(diff|old mode|new mode)\" | sed -e \"s/^old/NEW/;s/^new/old/;s/^NEW/new/\" | git apply"
+[color]
+	ui = auto
