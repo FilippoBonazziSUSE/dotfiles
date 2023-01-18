@@ -10,7 +10,8 @@ color body color108 color234 '^`{3}.*$'
 color body standout color108 color234 "@?Filippo"
 color body standout color108 color234 "@?fbonazzi"
 # Highlight messages to me
-color index color108 color234 ~p
+# Edit: this seemed like a good idea but it may not be
+# color index color108 color234 ~p
 
 # Color text that looks like a diff
 color body brightwhite color234 "^(\>\ )*diff \-.*"
