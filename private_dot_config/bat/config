@@ -7,3 +7,5 @@
 # Add custom syntax
 --map-syntax "*.pmdwn:Markdown"
 --map-syntax "oscrc:INI"
+--map-syntax "_service:XML"
+--map-syntax "_servicedata:XML"
