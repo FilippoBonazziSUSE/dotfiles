@@ -1,0 +1,5 @@
+# vim: filetype=zsh
+### whatdependson - find out which packages depend on a given package in Factory on x86_64
+# usage: whatdependson <package>
+
+osc whatdependson openSUSE:Factory "$1" standard x86_64
