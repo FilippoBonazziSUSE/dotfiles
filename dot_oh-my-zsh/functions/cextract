@@ -1,6 +1,6 @@
 # vim: filetype=zsh
-### extract - archive extractor
-# usage: extract <file>
+### cextract - archive extractor
+# usage: cextract <file>
 
 if [ -f $1 ] ; then
   case $1 in
