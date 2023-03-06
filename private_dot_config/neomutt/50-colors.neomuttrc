@@ -1,0 +1,3 @@
+# Source Gruvbox theme
+source ~/resources/mutt-gruvbox/colors-gruvbox-shuber.muttrc
+source ~/resources/mutt-gruvbox/colors-gruvbox-shuber-extended.muttrc

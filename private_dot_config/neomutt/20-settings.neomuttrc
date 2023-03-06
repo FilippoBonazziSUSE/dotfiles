@@ -30,7 +30,7 @@ set text_flowed
 set tmpdir = ~/.local/share/neomutt/temp # where to keep temp files
 
 # don't ask, just do!!
-set quit
+set quit = ask-yes
 set confirm_append = no
 set delete = yes
 set wait_key = no

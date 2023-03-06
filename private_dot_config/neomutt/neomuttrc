@@ -5,13 +5,12 @@ source ~/.config/neomutt/accounts/suse.de/config-offline
 # folder-hook $folder 'source ~/.config/neomutt/accounts/suse.de/config'
 
 # General settings
-source ~/.config/neomutt/settings
+source ~/.config/neomutt/20-settings.neomuttrc
 
 # Colors
-source ~/resources/mutt-gruvbox/colors-gruvbox-shuber.muttrc
-source ~/resources/mutt-gruvbox/colors-gruvbox-shuber-extended.muttrc
-source ~/.config/neomutt/patch_colors.muttrc
+source ~/.config/neomutt/50-colors.neomuttrc
+source ~/.config/neomutt/51-patch_colors.neomuttrc
 
 # Keybindings
-source ~/.config/neomutt/keybindings
+source ~/.config/neomutt/80-keybindings.neomuttrc
 
