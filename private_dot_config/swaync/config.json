@@ -34,5 +34,17 @@
       "urgency": "Low",
       "app-name": "Spotify"
     }
+  },
+  "widgets": [
+    "mpris",
+    "title",
+    "dnd",
+    "notifications"
+  ],
+  "widget-config": {
+    "mpris": {
+      "image-size": 100,
+      "image-radius": 12
+    }
   }
 }
