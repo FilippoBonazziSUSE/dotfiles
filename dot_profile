@@ -11,6 +11,7 @@ test -z "$PROFILEREAD" && . /etc/profile || true
 # editor. So uncomment the line below and enter the editor of your choice :-)
 #export EDITOR=/usr/bin/vim
 #export EDITOR=/usr/bin/mcedit
+export EDITOR=vim
 
 # For some news readers it makes sense to specify the NEWSSERVER variable here
 #export NEWSSERVER=your.news.server
