@@ -46,6 +46,12 @@ alias vimd='vim (Dockerfile|Containerfile)'
 # cat alias
 alias cat='bat --plain --paging=never'
 
+# quilt alias
+alias quilt='squilt'
+
 # zypper aliases (complementing zsh plugin)
 alias zinfo='zypper info'
 alias zrem='sudo zypper remove --clean-deps'
+
+# VSCodium
+alias codium='flatpak run com.vscodium.codium'
