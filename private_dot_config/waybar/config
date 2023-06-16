@@ -215,7 +215,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "scroll-step": 10,
+        "scroll-step": 2,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pavucontrol",
         "tooltip": true
