@@ -41,6 +41,7 @@ alias view='nview'
 ## Vim aliases for OBS
 alias vimc='vim *.changes'
 alias vims='vim *.spec'
+alias vimse='vim _service'
 alias vimd='vim (Dockerfile|Containerfile)'
 
 # cat alias
