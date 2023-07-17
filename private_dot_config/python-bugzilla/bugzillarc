@@ -5,6 +5,7 @@ server = bsc
 url = https://bugzilla.suse.com
 apiurl = https://apibugzilla.suse.com/xmlrpc.cgi
 user = fbonazzi
-passwordeval = secret-tool lookup username fbonazzi service apibugzilla.suse.com
+passwordeval = secret-tool lookup type password username fbonazzi service apibugzilla.suse.com
+api_key_eval = secret-tool lookup type api_key username fbonazzi service apibugzilla.suse.com
 # the user ID within bugzilla, not the username used for authentication
 mail = filippo.bonazzi@suse.com
