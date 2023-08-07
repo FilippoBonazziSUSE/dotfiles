@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["tray", "custom/zypper", "custom/npm", "custom/flatpak", "custom/fwupd", "custom/scratchpad", "network#wifi", "network#wired", "network#VPN", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "pulseaudio", "idle_inhibitor", "sway/language", "clock#date", "clock", "custom/notification"],
+    "modules-right": ["tray", "custom/zypper", "custom/npm", "custom/flatpak", "custom/fwupd", "custom/scratchpad", "network#wifi", "network#wired", "network#VPN", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "pulseaudio", "custom/running_sources", "idle_inhibitor", "sway/language", "clock#date", "clock", "custom/notification"],
     "sway/mode": {
         "format": "{}",
 	"max-length": 80
@@ -222,6 +222,11 @@
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pavucontrol",
         "tooltip": true
+    },
+    "custom/running_sources": {
+        "format": "<span foreground='red'>{} </span>",
+        "interval": 1,
+        "exec": "bash ~/.config/waybar/helpers/pulseaudio_sources.sh"
     },
     "sway/language": {
 	   "format": "{flag}",
