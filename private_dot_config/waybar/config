@@ -238,7 +238,6 @@
         "return-type": "json",
         "interval": 1,
         "exec": "bash ~/.config/waybar/helpers/scratchpad-indicator.sh 2> /dev/null",
-        "exec-if": "exit 0",
         "on-click": "swaymsg 'scratchpad show'",
         "on-click-right": "swaymsg 'move scratchpad'"
     },
