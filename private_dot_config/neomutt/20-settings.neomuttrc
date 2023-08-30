@@ -8,7 +8,7 @@ set my_name = "Filippo Bonazzi"
 set user_agent
 
 # Set preferred view modes
-auto_view text/html text/enriched text/x-vcard text/calendar application/ics # view html automatically
+auto_view text/html text/enriched text/x-vcard text/calendar application/ics text/markdown # view html automatically
 alternative_order text/plain text/enriched text/html text/*
 
 # main options
