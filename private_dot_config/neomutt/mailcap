@@ -5,6 +5,8 @@ text/html; lynx -assume_charset=%{charset} -display_charset=utf-8 -dump -force_h
 text/plain; nvim %s
 text/markdown; nvim %s
 text/markdown; cat %s; copiousoutput
+text/x-patch; nvim %s
+text/x-patch; cat %s; copiousoutput
 
 #PDFs
 application/pdf; evince %s
