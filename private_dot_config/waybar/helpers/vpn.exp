@@ -3,12 +3,12 @@
 set network ""
 
 if {[llength $argv] == 0} {
-	set network [exec sh -c "nmcli connection show | grep vpn | sed 's/\\s\\+/\\t/g' | cut -f1"]
+	set network [exec nmcli connection show | grep vpn | awk {NR==1{print $1}}]
 } else {
 	set network [lindex $argv 0]
 }
 
-set uuid [exec sh -c "nmcli connection show | grep $network | sed 's/\\s\\+/\\t/g' | cut -f2"]
+set uuid [exec nmcli connection show | grep $network | awk {NR==1{print $2}}]
 
 set pass [exec secret-tool lookup setting-name vpn connection-uuid "$uuid"]
 
