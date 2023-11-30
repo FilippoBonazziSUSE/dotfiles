@@ -1,7 +1,9 @@
 #!/bin/bash
 # Report the number of running audio sources (microphones) in i3blocks style
 
-num_sources="$(pactl list sources short | grep -c RUNNING)"
+#num_sources="$(pactl list sources short | grep -c RUNNING)"
+# Ignore monitors
+num_sources="$(pactl list sources short | grep -ve '\.monitor\>' | grep -c RUNNING)"
 
 if [[ "$num_sources" -eq "0" ]]
 then
