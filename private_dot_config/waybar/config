@@ -162,7 +162,7 @@
         "format-wifi": "",
         "format-linked": "",
         "format-disconnected": "",
-	"tooltip-format": "{ifname} {essid} ({signalStrength}%)",
+	"tooltip-format": "{essid} ({signalStrength}%) ({frequency} GHz)\n{ifname} {ipaddr}/{cidr}\nU: {bandwidthUpBytes} D: {bandwidthDownBytes}",
 	"tooltip-format-disconnected": "Airplane mode",
 	"on-click": "bash ~/.config/waybar/helpers/toggle_wifi.sh; pkill -SIGRTMIN+8 waybar",
 	"on-click-right": "exec alacritty -e sh -c 'nmtui'",
@@ -174,7 +174,7 @@
         "format-linked": "",
         "format-disconnected": "",
         "format-disabled": "",
-	"tooltip-format": "{ifname}",
+	"tooltip-format": "{ifname}\n{ipaddr}/{cidr}",
 	"on-click-right": "exec alacritty -e sh -c 'nmtui'"
     },
     "network#VPN": {
@@ -182,7 +182,7 @@
         "format-ethernet": "",
         "format-linked": "",
         "format-disconnected": "",
-	"tooltip-format": "{ifname} {ipaddr}",
+	"tooltip-format": "{ifname}\n{ipaddr}/{cidr}",
 	"tooltip-format-disconnected": "Disconnected",
 	"on-click": "bash ~/.config/waybar/helpers/toggle_vpn.sh; pkill -SIGRTMIN+8 waybar",
 	"on-click-right": "exec alacritty -e sh -c 'nmtui'",
