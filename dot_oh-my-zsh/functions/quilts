@@ -42,7 +42,7 @@ else
     fi
   fi
 fi
-if cd *(/)
+if builtin cd */
 then
   quilt push -a
   #ctags -R .

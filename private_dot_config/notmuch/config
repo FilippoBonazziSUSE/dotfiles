@@ -29,8 +29,8 @@ path=/home/filippo/Mail
 # address to which the original email was addressed.
 #
 [user]
-primary_email=<>
-other_email=<>
+primary_email=fbonazzi@suse.de
+other_email=filippo.bonazzi@suse.com
 
 # Configuration for "notmuch new"
 #

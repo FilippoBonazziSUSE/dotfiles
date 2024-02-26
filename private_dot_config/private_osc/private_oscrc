@@ -115,8 +115,10 @@ build-memory = 8192
 # aliases = foo, bar
 # real name used in .changes, unless the one from osc meta prj <user> will be used
 # realname =
+realname = Filippo Bonazzi
 # email used in .changes, unless the one from osc meta prj <user> will be used
 # email =
+email = filippo.bonazzi@suse.com
 # additional headers to pass to a request, e.g. for special authentication
 #http_headers = Host: foofoobar,
 #       User: mumblegack
@@ -124,9 +126,12 @@ build-memory = 8192
 #pass =
 user=fbonazzi
 credentials_mgr_class=osc.credentials.KeyringCredentialsManager:keyring.backends.SecretService.Keyring
-trusted_prj=openSUSE:Tumbleweed security:SELinux SUSE:SLE-15:Update SUSE:SLE-15:GA SUSE:SLE-15-SP3:GA SUSE:SLE-15-SP2:Update SUSE:SLE-15-SP1:Update SUSE:SLE-15-SP2:GA SUSE:SLE-15-SP4:GA SUSE:SLE-15-SP3:Update SUSE:SLE-15-SP1:GA openSUSE:Backports:SLE-15-SP4 openSUSE:Backports:SLE-15-SP4:Checks
+trusted_prj=openSUSE:Tumbleweed security:SELinux SUSE:SLE-15:Update SUSE:SLE-15:GA SUSE:SLE-15-SP3:GA SUSE:SLE-15-SP2:Update SUSE:SLE-15-SP1:Update SUSE:SLE-15-SP2:GA SUSE:SLE-15-SP4:GA SUSE:SLE-15-SP3:Update SUSE:SLE-15-SP1:GA openSUSE:Backports:SLE-15-SP4 openSUSE:Backports:SLE-15-SP4:Checks X11:Wayland SUSE:SLE-15-SP4:Update:Products:Micro53 SUSE:SLE-15-SP4:Update editors Base:System devel:libraries:c_c++ home:fbonazzi openSUSE:Containers:Tumbleweed openSUSE:Tumbleweed:OldKey openSUSE:Factory SUSE:ALP security devel:openSUSE:Factory:rpmlint
 
 [https://api.suse.de]
+realname = Filippo Bonazzi
+email = filippo.bonazzi@suse.com
 user=fbonazzi
 sshkey=~/.ssh/id_ed25519.pub
 credentials_mgr_class=osc.credentials.KeyringCredentialsManager:keyring.backends.SecretService.Keyring
+trusted_prj=SUSE:SLE-15:Update SUSE:SLE-15:GA SUSE:SLE-15-SP4:GA SUSE:SLE-15-SP4:Update:Products:Micro53 SUSE:SLE-15-SP3:Update SUSE:SLE-15-SP3:GA SUSE:SLE-15-SP4:Update SUSE:SLE-15-SP1:Update SUSE:SLE-15-SP2:Update SUSE:SLE-15-SP1:GA SUSE:SLE-15-SP2:GA openSUSE.org:openSUSE:Tumbleweed SUSE:SLE-15-SP4:Update:Products:Micro54

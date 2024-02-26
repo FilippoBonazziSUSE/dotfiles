@@ -1,9 +1,9 @@
 IMAPAccount suse.de
 # Address to connect to
-Host <host>
-User <user>
+Host imap.suse.de
+User fbonazzi@mbsync-TW
 # Retrieve the password using the Secret Service
-PassCmd "secret-tool lookup user <user> domain <host>"
+PassCmd "secret-tool lookup user fbonazzi@mbsync-TW domain imap.suse.de"
 # Use SSL
 SSLType IMAPS
 
