@@ -53,6 +53,7 @@ alias quilt='squilt'
 # zypper aliases (complementing zsh plugin)
 alias zinfo='zypper info'
 alias zrem='sudo zypper remove --clean-deps'
+alias zreff='zref --force'
 
 # VSCodium
 alias codium='flatpak run com.vscodium.codium'
