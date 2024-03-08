@@ -132,3 +132,9 @@ export INFOPATH="${INFOPATH}:$TEXLIVE/texmf-dist/doc/info"
 export ATUIN_NOBIND=1
 eval "$(atuin init zsh)"
 bindkey '^r' _atuin_search_widget
+
+# Redefine PROMPT inside containers
+if (env | grep -Fq 'DISTROBOX')
+then
+  export PROMPT="distrobox:$(hostname -s) $PROMPT"
+fi
