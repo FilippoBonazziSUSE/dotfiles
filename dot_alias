@@ -56,7 +56,7 @@ alias zrem='sudo zypper remove --clean-deps'
 alias zreff='zref --force'
 
 # VSCodium
-alias codium='flatpak run com.vscodium.codium'
+alias codium='flatpak run com.vscodium.codium --ozone-platform=wayland'
 
 # virsh alias
 alias svirsh='virsh -c qemu:///system'
