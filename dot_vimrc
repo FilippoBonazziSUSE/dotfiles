@@ -100,6 +100,7 @@ call HighlightBadWhitespace()
 augroup cmdline_editor
     autocmd!
     autocmd BufEnter * if @% =~# '.*/bash-fc' | set ft=sh | endif
+    autocmd BufEnter * if @% =~# '/tmp/*.zsh' | set ft=zsh | endif
 augroup END
 
 " Format the whole file remaining in that position
