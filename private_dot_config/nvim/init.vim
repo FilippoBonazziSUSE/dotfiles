@@ -60,6 +60,15 @@ Plug 'tpope/vim-speeddating'
 " Sleuth
 Plug 'tpope/vim-sleuth'
 
+" Eunuch
+Plug 'tpope/vim-eunuch'
+
+" Endwise
+Plug 'tpope/vim-endwise'
+
+" Characterize
+Plug 'tpope/vim-characterize'
+
 " mbsync configuration syntax
 Plug 'Fymyte/mbsync.vim'
 
