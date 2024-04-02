@@ -36,3 +36,5 @@
 	ui = auto
 [commit]
 	gpgsign = true
+[column]
+	ui = auto
