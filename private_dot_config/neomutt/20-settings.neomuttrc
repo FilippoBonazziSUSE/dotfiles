@@ -55,7 +55,9 @@ set mail_check_stats
 
 # Index
 # Default: %4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s
-set index_format="%4C %Z %<[d?%[Today      %R]&%[%F %R]> %-20.20F %?M?(#%03M)&(%4l)? %s"
+set index_format="%4C %Z %<[d?%[Today      %R]&%[%F %R]> %-20.20F %?M?(#%03M)&(%4c)? %s"
+# Show number of lines in the message (broken)
+#set index_format="%4C %Z %<[d?%[Today      %R]&%[%F %R]> %-20.20F %?M?(#%03M)&(%4l)? %s"
 # Show To <list name> instead of From <sender>
 # set index_format="%4C %Z %<[d?%[Today      %R]&%[%F %R]> %-20.20L %?M?(#%03M)&(%4l)? %s"
 
