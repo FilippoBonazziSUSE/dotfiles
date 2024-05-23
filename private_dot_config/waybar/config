@@ -40,7 +40,7 @@
         "interval": 300,
         "exec": "bash ~/.config/waybar/helpers/flatpak.sh",
         "exec-if": "bash ~/.config/waybar/helpers/flatpak.sh",
-        "on-click": "exec alacritty -e sh -c 'flatpak update --noninteractive; pkill -SIGRTMIN+8 waybar'",
+        "on-click": "exec alacritty -e sh -c 'flatpak update; pkill -SIGRTMIN+8 waybar'",
         "signal": 8
     },
     "custom/npm": {
