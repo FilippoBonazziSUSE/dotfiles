@@ -74,6 +74,14 @@ window#waybar.solo {
     color: rgba(217, 216, 216, 1);
 }
 
+#privacy-item.screenshare {
+    color: rgba(238, 46, 36, 1);
+}
+
+#privacy-item.audio-in {
+    color: rgba(238, 46, 36, 1);
+}
+
 #network.wifi.linked {
     color: rgba(217, 216, 216, 1);
 }
