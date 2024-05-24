@@ -8,7 +8,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["tray", "custom/zypper", "custom/npm", "custom/flatpak", "custom/fwupd", "custom/scratchpad", "network#wifi", "network#wired", "network#VPN", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "pulseaudio", "privacy", "idle_inhibitor", "sway/language", "clock#date", "clock", "custom/notification"],
+    "modules-right": ["tray", "custom/zypper", "custom/npm", "custom/flatpak", "custom/fwupd", "custom/scratchpad", "systemd-failed-units", "network#wifi", "network#wired", "network#VPN", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "pulseaudio", "privacy", "idle_inhibitor", "sway/language", "clock#date", "clock", "custom/notification"],
     "sway/mode": {
         "format": "{}",
 	"max-length": 80

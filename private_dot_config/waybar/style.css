@@ -82,6 +82,10 @@ window#waybar.solo {
     color: rgba(238, 46, 36, 1);
 }
 
+#systemd-failed-units.degraded {
+    color: rgba(255, 210, 4, 1);
+}
+
 #network.wifi.linked {
     color: rgba(217, 216, 216, 1);
 }
