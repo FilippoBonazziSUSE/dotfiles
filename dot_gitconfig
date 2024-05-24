@@ -32,6 +32,13 @@
 	logstat = "log --stat"
 	stash-unapply = !git stash show -p | git apply -R
 	permission-reset = "!git diff -p | grep -E \"^(diff|old mode|new mode)\" | sed -e \"s/^old/NEW/;s/^new/old/;s/^NEW/new/\" | git apply"
+# Gitlab MR alias
+	mrr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git switch mr-$1-$2' -
+	mr = "mrr origin"
+# Github PR alias
+	prr = !sh -c 'git fetch $1 pull/$2/head:pr-$1-$2 && git switch pr-$1-$2' -
+	pr = "prr origin"
+
 [color]
 	ui = auto
 [commit]
