@@ -38,6 +38,14 @@
 # Github PR alias
 	prr = !sh -c 'git fetch $1 pull/$2/head:pr-$1-$2 && git switch pr-$1-$2' -
 	pr = "prr origin"
+# Git open remote in browser
+	website-url = "!f() { \
+		git remote get-url $1 | perl -pe 's,^(?:.*@)?(?:https://)?([^:\\n]*?)?:?([^:\\n]*?)?(?:\\.git)?$,https://$1/$2,'; \
+		}; f"
+	website-url-open = "!f() { \
+		git remote get-url $1 | perl -pe 's,^(?:.*@)?(?:https://)?([^:\\n]*?)?:?([^:\\n]*?)?(?:\\.git)?$,https://$1/$2,' | xargs xdg-open; \
+		}; f"
+	open = "website-url-open origin"
 
 [color]
 	ui = auto
