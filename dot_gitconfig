@@ -10,9 +10,13 @@
 	diffFilter = delta --color-only
 [delta]
 	navigate = true
+	hyperlinks = true
+	line-numbers = true
+	keep-plus-minus-markers = true
 [grep]
 	lineNumber = true
 [diff]
+	colorMoved = default
 	tool = meld
 [difftool]
 	prompt = false
@@ -24,7 +28,7 @@
 	cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
 [core]
 	editor = vim
-	pager = "less -eFiJM~ -j3"
+	#pager = "less -eFiJM~ -j3"
 [alias]
 	shortgraph = "log --graph --oneline --all --decorate --topo-order"
 	graph = "log --graph --all --decorate --topo-order"
