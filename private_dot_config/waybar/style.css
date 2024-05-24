@@ -74,6 +74,18 @@ window#waybar.solo {
     color: rgba(217, 216, 216, 1);
 }
 
+#cpu.low {
+    color: rgba(217, 216, 216, 1);
+}
+
+#cpu.medium {
+    color: rgba(255, 210, 4, 1);
+}
+
+#cpu.high {
+    color: rgba(238, 46, 36, 1);
+}
+
 #privacy-item.screenshare {
     color: rgba(238, 46, 36, 1);
 }
