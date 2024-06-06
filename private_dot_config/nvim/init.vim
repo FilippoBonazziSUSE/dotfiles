@@ -101,6 +101,10 @@ colorscheme gruvbox-material
 " Color trailing whitespace with theme color
 " let g:better_whitespace_guicolor=gruvbox_material#get_palette('medium', 'material').red[0]
 
+" Show trailing whitespace in Markdown files
+" Redefine built-in blacklist, removing markdown
+let g:better_whitespace_filetypes_blacklist=['diff', 'git', 'gitcommit', 'unite', 'qf', 'help', 'fugitive']
+
 " lightline
 " Set colorscheme to match
 " Add modified icon to inactive buffers
