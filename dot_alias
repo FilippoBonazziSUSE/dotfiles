@@ -31,6 +31,7 @@ alias sl="ls | rev"
 alias isc='osc -A https://api.suse.de'
 alias oscb='osc build --ccache --cpio-bulk-download --download-api-only'
 alias oscsh='TERM=xterm-256color osc shell'
+alias osco='osc_open.py'
 
 # Nvim aliases
 alias nview='nvim -R'
