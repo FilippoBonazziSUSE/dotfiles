@@ -165,27 +165,27 @@ nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 lua require('lspconfig').pylsp.setup {settings = {pylsp = {plugins = {autopep8 = {enabled = false}, yapf = {enabled = true}}}}}
 
 com! CheckHighlightUnderCursor echo {l,c,n ->
-        \   'hi<'    . synIDattr(synID(l, c, 1), n)             . '> '
-        \  .'trans<' . synIDattr(synID(l, c, 0), n)             . '> '
-        \  .'lo<'    . synIDattr(synIDtrans(synID(l, c, 1)), n) . '> '
-        \ }(line("."), col("."), "name")
+      \   'hi<'    . synIDattr(synID(l, c, 1), n)             . '> '
+      \  .'trans<' . synIDattr(synID(l, c, 0), n)             . '> '
+      \  .'lo<'    . synIDattr(synIDtrans(synID(l, c, 1)), n) . '> '
+      \ }(line("."), col("."), "name")
 
 function! s:get_visual_selection()
-    " Why is this not a built-in Vim script function?!
-    if mode() == "v"
-      let [line_start, column_start] = getpos("v")[1:2]
-      let [line_end, column_end] = getpos(".")[1:2]
-    else
-      let [line_start, column_start] = getpos("'<")[1:2]
-      let [line_end, column_end] = getpos("'>")[1:2]
-    endif
-    let lines = getline(line_start, line_end)
-    if len(lines) == 0
-        return ''
-    endif
-    let lines[-1] = lines[-1][: column_end - (&selection == 'inclusive' ? 1 : 2)]
-    let lines[0] = lines[0][column_start - 1:]
-    return join(lines, "\n")
+  " Why is this not a built-in Vim script function?!
+  if mode() == "v"
+    let [line_start, column_start] = getpos("v")[1:2]
+    let [line_end, column_end] = getpos(".")[1:2]
+  else
+    let [line_start, column_start] = getpos("'<")[1:2]
+    let [line_end, column_end] = getpos("'>")[1:2]
+  endif
+  let lines = getline(line_start, line_end)
+  if len(lines) == 0
+    return ''
+  endif
+  let lines[-1] = lines[-1][: column_end - (&selection == 'inclusive' ? 1 : 2)]
+  let lines[0] = lines[0][column_start - 1:]
+  return join(lines, "\n")
 endfunction
 
 " Auto copy visual selection to primary clipboard
