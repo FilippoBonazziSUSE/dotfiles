@@ -7,3 +7,9 @@ CVE
 VNC
 RDP
 GDM
+CRD
+DoS
+Valgrind
+SIGABRT
+SIGSEGV
+AFL
