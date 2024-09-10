@@ -1,7 +1,7 @@
 #!/bin/bash
 # Report the number of available zypper updates in i3blocks style
 
-num_updates=$(zypper -n lu | grep -c 'v |')
+num_updates=$(zypper -n lu | grep -c 'v \+|')
 
 if [[ "$num_updates" -eq "0" ]]
 then
