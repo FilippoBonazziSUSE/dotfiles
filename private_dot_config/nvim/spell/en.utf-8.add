@@ -13,3 +13,15 @@ Valgrind
 SIGABRT
 SIGSEGV
 AFL
+loopback
+smartcard
+YubiKey
+YubiKeys
+systemd
+setuid
+whitelist
+sysctl
+Varlink
+IPC
+MirrorCache
+libcgroup
