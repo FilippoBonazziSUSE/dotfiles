@@ -26,6 +26,7 @@ dialect = "uk"
 ## Which style to use
 ## Possible values: auto, full and compact
 style = "compact"
+inline_height = 0
 
 ## which search mode to use
 ## possible values: prefix, fulltext, fuzzy
