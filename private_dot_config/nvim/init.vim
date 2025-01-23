@@ -72,6 +72,9 @@ Plug 'tpope/vim-characterize'
 " mbsync configuration syntax
 Plug 'Fymyte/mbsync.vim'
 
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 call plug#end()
 """""""""""""""""""""""""""""""""""""""
 
@@ -163,6 +166,9 @@ nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
 " PYLSP setup
 lua require('lspconfig').pylsp.setup {settings = {pylsp = {plugins = {autopep8 = {enabled = false}, yapf = {enabled = true}}}}}
+
+" Treesitter setup
+lua require("treesitter")
 
 com! CheckHighlightUnderCursor echo {l,c,n ->
       \   'hi<'    . synIDattr(synID(l, c, 1), n)             . '> '
