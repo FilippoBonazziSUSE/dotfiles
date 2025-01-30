@@ -7,7 +7,7 @@ PassCmd "secret-tool lookup user fbonazzi@mbsync-TW domain imap.suse.de"
 # Use SSL
 SSLType IMAPS
 # Increase timeout due to slow server
-Timeout 60
+Timeout 180
 
 IMAPStore suse.de-remote
 Account suse.de
