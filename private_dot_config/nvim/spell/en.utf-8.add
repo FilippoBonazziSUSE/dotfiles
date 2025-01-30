@@ -26,3 +26,6 @@ IPC
 MirrorCache
 libcgroup
 neomutt
+selinux
+SELinux
+openQA
