@@ -30,9 +30,6 @@ Plug 'lzap/vim-selinux'
 " LSP config
 Plug 'neovim/nvim-lspconfig'
 
-" Sway syntax
-Plug 'jamespeapen/swayconfig.vim'
-
 " neomutt syntax
 Plug 'neomutt/neomutt.vim'
 
@@ -44,9 +41,6 @@ Plug 'brenoprata10/nvim-highlight-colors'
 
 " Trouble list
 Plug 'folke/trouble.nvim'
-
-" LSP auto colors
-Plug 'folke/lsp-colors.nvim'
 
 " Surround
 Plug 'tpope/vim-surround'
