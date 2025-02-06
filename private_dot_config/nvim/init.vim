@@ -43,24 +43,37 @@ Plug 'brenoprata10/nvim-highlight-colors'
 Plug 'folke/trouble.nvim'
 
 " Surround
+" cs"'
+" ds'
 Plug 'tpope/vim-surround'
 
 " Commentary
+" Use gcc to comment out a line (takes a count), gc to comment out the target
+" of a motion (for example, gcap to comment out a paragraph), gc in visual
+" mode to comment out the selection, and gc in operator pending mode to target
+" a comment. You can also use it as a command, either with a range like
+" :7,17Commentary, or as part of a :global invocation like with
+" :g/TODO/Commentary
 Plug 'tpope/vim-commentary'
 
 " speeddating
+" Use ^a ^x with dates
 Plug 'tpope/vim-speeddating'
 
 " Sleuth
+" Autodetect buffer options from current file, similar files, files in tree...
 Plug 'tpope/vim-sleuth'
 
 " Eunuch
+" UNIX helpers, shebang detection, chmod +x
 Plug 'tpope/vim-eunuch'
 
 " Endwise
+" end structures automatically (if, do, ...)
 Plug 'tpope/vim-endwise'
 
 " Characterize
+" ga shows character representation
 Plug 'tpope/vim-characterize'
 
 " mbsync configuration syntax
