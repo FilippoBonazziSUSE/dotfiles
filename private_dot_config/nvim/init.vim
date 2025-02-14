@@ -208,5 +208,10 @@ augroup visual_clipboard
   autocmd ModeChanged [vV\x16]*:* let @* = s:get_visual_selection()
 augroup END
 
+" Automatically resize splits to equal size when resizing window
+augroup autoresize_splits
+  autocmd VimResized * wincmd =
+augroup END
+
 " Show all whitespace with :set list
 set listchars=eol:¬,tab:-->,trail:~,extends:>,precedes:<,space:␣
