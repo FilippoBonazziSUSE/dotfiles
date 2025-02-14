@@ -14,10 +14,11 @@ color body standout color108 color234 "@?fbonazzi"
 # color index color108 color234 ~p
 
 # Color text that looks like a diff
-color body brightwhite color234 "^(\>\ )*diff \-.*"
-color body brightwhite color234 "^(\>\ )*index [a-f0-9].*"
-color body brightwhite color234 "^\(\>\ )*\-\-\- .*"
-color body brightwhite color234 "^(\>\ )*[\+]{3} .*"
-color body color142    color234 "^(\>\ )*[\+][^\+].*"
-color body color167    color234 "^(\>\ )*[\-][^\-].*"
-color body color109    color234 "^(\>\ )*@@ .*@@"
+# Edit: this seemed like a good idea but it may not be
+# color body brightwhite color234 "^(\>\ )*diff \-.*"
+# color body brightwhite color234 "^(\>\ )*index [a-f0-9].*"
+# color body brightwhite color234 "^\(\>\ )*\-\-\- .*"
+# color body brightwhite color234 "^(\>\ )*[\+]{3} .*"
+# color body color142    color234 "^(\>\ )*[\+][^\+].*"
+# color body color167    color234 "^(\>\ )*[\-][^\-].*"
+# color body color109    color234 "^(\>\ )*@@ .*@@"
