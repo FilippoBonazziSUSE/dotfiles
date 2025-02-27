@@ -105,6 +105,9 @@ endif
 " Highlight colors in all filetypes
 lua require('nvim-highlight-colors').setup {render = 'background'}
 
+" Configure Trouble
+lua require('trouble').setup {cmd = 'Trouble'}
+
 " color scheme
 colorscheme gruvbox-material
 
