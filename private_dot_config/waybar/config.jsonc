@@ -153,12 +153,9 @@
         "format-charging": "{capacity}% ",
         "format-full": "{capacity}% ",
         "format-plugged": "",
-        "format-alt": "{capacity}% {time}",
         "format-icons": ["", "", "", "", ""],
-	"on-click": "exec alacritty -e sh -c 'echo PowerTOP requires root privileges; sudo powertop'"
-    },
-    "battery#bat2": {
-        "bat": "BAT2"
+	"on-click-right": "exec alacritty -e sh -c 'echo PowerTOP requires root privileges; sudo powertop'",
+        "interval": 3
     },
     "network#wifi": {
         "interface": "wlp*",
