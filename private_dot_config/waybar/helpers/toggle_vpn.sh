@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/bash -e
 #
 # Toggle the VPN connection ON or OFF
 
@@ -6,7 +6,7 @@
 # If no VPN name is provided, the first available one will be selected
 VPN=$1
 
-ACTIVE=$(nmcli connection show --active | grep "vpn" | sed 's/\s\+/\t/g' | cut -f1)
+ACTIVE=$(nmcli connection show --active | grep "vpn" | awk 'NR==1 {print $1}')
 
 if [ -z "$ACTIVE" ]
 then
