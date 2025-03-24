@@ -19,7 +19,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'sainnhe/gruvbox-material'
 
 " Status bar
-Plug 'itchyny/lightline.vim'
+Plug 'nvim-lualine/lualine.nvim'
+
+" Icons for lualine
+Plug 'nvim-tree/nvim-web-devicons'
 
 " Trailing whitespace
 Plug 'ntpeters/vim-better-whitespace'
@@ -88,9 +91,6 @@ call plug#end()
 " Set terminal title
 set title
 
-" always show the status bar
-set laststatus=2
-
 " turn on line numbering
 set number
 
@@ -118,13 +118,12 @@ colorscheme gruvbox-material
 " Redefine built-in blacklist, removing markdown
 let g:better_whitespace_filetypes_blacklist=['diff', 'git', 'gitcommit', 'unite', 'qf', 'help', 'fugitive']
 
-" lightline
-" Set colorscheme to match
-" Add modified icon to inactive buffers
-let g:lightline = {
-      \	'colorscheme' : 'gruvbox_material',
-      \	'inactive': {'left': [['filename'], ['modified']]},
-      \ }
+" Lualine setup
+lua require('lualine-conf')
+
+" always show the status bar
+set laststatus=2
+
 " Do not show additional mode info outside of status line
 set noshowmode
 
