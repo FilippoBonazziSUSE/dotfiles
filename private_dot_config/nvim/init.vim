@@ -16,7 +16,7 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 
 " Gruvbox theme
-Plug 'sainnhe/gruvbox-material'
+Plug 'ellisonleao/gruvbox.nvim'
 
 " Status bar
 Plug 'nvim-lualine/lualine.nvim'
@@ -109,7 +109,8 @@ lua require('nvim-highlight-colors').setup {render = 'background'}
 lua require('trouble').setup {cmd = 'Trouble'}
 
 " color scheme
-colorscheme gruvbox-material
+set background=dark
+colorscheme gruvbox
 
 " Color trailing whitespace with theme color
 " let g:better_whitespace_guicolor=gruvbox_material#get_palette('medium', 'material').red[0]
