@@ -113,7 +113,7 @@ set background=dark
 colorscheme gruvbox
 
 " Color trailing whitespace with theme color
-" let g:better_whitespace_guicolor=gruvbox_material#get_palette('medium', 'material').red[0]
+highlight def link ExtraWhitespace ErrorMsg
 
 " Show trailing whitespace in Markdown files
 " Redefine built-in blacklist, removing markdown
