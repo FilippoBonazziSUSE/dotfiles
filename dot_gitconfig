@@ -60,3 +60,16 @@
 
 [help]
 	autoCorrect = prompt
+
+# Compact Git remote URLs
+[url "gitea@src.opensuse.org:"]
+  insteadOf = soo:
+
+[url "gitea@src.suse.de:"]
+  insteadOf = ssd:
+
+[url "gitlab@gitlab.suse.de:"]
+  insteadOf = gls:
+
+[url "git@github.com:"]
+  insteadOf = gh:
