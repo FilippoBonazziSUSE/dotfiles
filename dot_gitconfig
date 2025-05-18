@@ -57,3 +57,6 @@
 	gpgsign = true
 [column]
 	ui = auto
+
+[help]
+	autoCorrect = prompt
