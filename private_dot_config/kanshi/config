@@ -1,0 +1,20 @@
+# Laptop profile
+profile laptop {
+	output eDP-1 position 0,0
+}
+
+# Home profile
+profile home {
+	output eDP-1 position 0,0
+	output "Samsung Electric Company U28E570 HNMR400661" position 1920,-1280
+}
+
+profile SOF {
+	output "Samsung Electric Company C34J79x H4ZRC00446" position 0,0
+	output eDP-1 position 730,1440
+}
+
+profile NUE {
+	output "Samsung Electric Company C34J79x H4ZRC00564" position 0,0
+	output eDP-1 position 730,1440
+}
