@@ -4,8 +4,8 @@ Host imap.suse.de
 User fbonazzi@mbsync-TW
 # Retrieve the password using the Secret Service
 PassCmd "secret-tool lookup user fbonazzi@mbsync-TW domain imap.suse.de"
-# Use SSL
-SSLType IMAPS
+# Use TLS
+TLSType IMAPS
 # Increase timeout due to slow server
 Timeout 180
 
@@ -16,7 +16,7 @@ MaildirStore suse.de-local
 SubFolders Verbatim
 # The trailing "/" is important
 Path ~/Mail/suse.de/
-INBOX ~/Mail/suse.de/INBOX
+Inbox ~/Mail/suse.de/INBOX
 
 Channel suse.de
 Far :suse.de-remote:
