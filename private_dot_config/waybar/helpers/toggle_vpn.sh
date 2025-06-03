@@ -1,9 +1,12 @@
-#!/bin/bash -euo pipefail
+#!/bin/bash
 #
 # Toggle the VPN connection ON or OFF
 
 # Provide a VPN name to activate [optional]
 # If no VPN name is provided, the first available one will be selected
+
+set -euo pipefail
+
 VPN=$1
 
 ACTIVE=$(nmcli connection show --active | grep "vpn" | awk 'NR==1 {print $1}')

@@ -1,5 +1,7 @@
-#!/bin/bash -euo pipefail
+#!/bin/bash
 # Report the number of available NPM updates in i3blocks style
+
+set -euo pipefail
 
 num_updates=$(npm outdated -g | tail -n +2 | wc -l)
 

@@ -1,5 +1,7 @@
-#!/bin/bash -euo pipefail
+#!/bin/bash
 # Report the number of available fwupd updates in i3blocks style
+
+set -euo pipefail
 
 fwupdmgr refresh &>/dev/null
 fwupdmgr get-updates &>/dev/null

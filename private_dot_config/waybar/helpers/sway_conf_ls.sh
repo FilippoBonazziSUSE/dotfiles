@@ -2,6 +2,8 @@
 #
 # Find all files in the Sway configuration
 
+set -euo pipefail
+
 XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-"$HOME/.config"}
 
 MAX_NESTED_INCLUDES=99

@@ -1,6 +1,8 @@
-#!/bin/bash -euo pipefail
+#!/bin/bash
 #
 # Toggle the specified WiFi interface
+
+set -euo pipefail
 
 STATUS=$(nmcli radio wifi)
 
