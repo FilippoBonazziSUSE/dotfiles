@@ -79,9 +79,6 @@ Plug 'tpope/vim-endwise'
 " ga shows character representation
 Plug 'tpope/vim-characterize'
 
-" mbsync configuration syntax
-Plug 'Fymyte/mbsync.vim'
-
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
