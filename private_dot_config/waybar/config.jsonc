@@ -223,11 +223,6 @@
         "on-click-right": "pavucontrol",
         "tooltip": true
     },
-    "custom/running_sources": {
-        "format": "<span foreground='red'>{} </span>",
-        "interval": 1,
-        "exec": "bash ~/.config/waybar/helpers/pulseaudio_sources.sh"
-    },
     "sway/language": {
 	   "format": "{flag}",
 	   "tooltip-format": "{long}",
