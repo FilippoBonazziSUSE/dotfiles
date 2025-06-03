@@ -2,3 +2,4 @@ README.md
 
 .vim/.netrwhist
 .config/nvim/spell/*.spl
+.config/nvim/spell/*.sug
