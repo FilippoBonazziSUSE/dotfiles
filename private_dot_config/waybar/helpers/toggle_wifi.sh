@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash -euo pipefail
 #
 # Toggle the specified WiFi interface
 

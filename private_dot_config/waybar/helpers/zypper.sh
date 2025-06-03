@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -euo pipefail
 # Report the number of available zypper updates in i3blocks style
 
 num_updates=$(zypper -n lu | grep -c 'v \+|')

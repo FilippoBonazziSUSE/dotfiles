@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -euo pipefail
 # Report the number of available flatpak updates in i3blocks style
 
 # Obtain the number of updates as the number of lines in the command output,

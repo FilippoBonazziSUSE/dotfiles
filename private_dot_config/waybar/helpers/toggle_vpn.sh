@@ -1,4 +1,4 @@
-#! /bin/bash -e
+#!/bin/bash -euo pipefail
 #
 # Toggle the VPN connection ON or OFF
 
