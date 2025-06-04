@@ -7,7 +7,7 @@
 
 set -eu
 
-VPN=$1
+VPN="${1:-}"
 
 ACTIVE=$(nmcli connection show --active | grep "vpn" | awk 'NR==1 {print $1}')
 
