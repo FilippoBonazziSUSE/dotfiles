@@ -5,7 +5,7 @@
 # Provide a VPN name to activate [optional]
 # If no VPN name is provided, the first available one will be selected
 
-set -euo pipefail
+set -eu
 
 VPN=$1
 
