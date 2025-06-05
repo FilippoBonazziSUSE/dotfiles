@@ -25,7 +25,7 @@ parse_conf_file() {
     then
       >&2 echo "Too many nested includes (stopping at $MAX_NESTED_INCLUDES). Bad config?"
     else
-      ((include_level++))
+      include_level=$((include_level + 1))
 
       # Follow the include chain
       while read -r l
@@ -48,7 +48,8 @@ parse_conf_file() {
           parse_conf_file "$l"
         fi
       done <<< $(grep -oP "(?<=include )[^#]+$" "$f")
-      ((include_level--))
+
+      include_level=$((include_level - 1))
     fi
   fi
 }
