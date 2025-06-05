@@ -10,7 +10,7 @@ MAX_NESTED_INCLUDES=99
 include_level=0
 
 sway_config_files=(
-  "~/.sway/config"
+  "$HOME/.sway/config"
   "$XDG_CONFIG_HOME/sway/config"
   "/etc/sway/config"
 )
