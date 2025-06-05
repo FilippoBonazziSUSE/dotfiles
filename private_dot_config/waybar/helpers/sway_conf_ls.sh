@@ -34,20 +34,11 @@ parse_conf_file() {
         l="${l/#\~/$HOME}"
 
         # Expand globs if any
-        if [[ "$l" =~ '*' ]]
-        then
-          # Split the path into pre and post star
-          confpath=${l%\**}
-          confext=${l#*\*}
-
-          for f in "${confpath}"/*"${confext}"
-          do
-            parse_conf_file "$f"
-          done
-        else
-          parse_conf_file "$l"
-        fi
-      done <<< $(grep -oP "(?<=include )[^#]+$" "$f")
+        while read -r f
+        do
+          parse_conf_file "$f"
+        done < <(compgen -o filenames -G "$l" | sort)
+      done < <(grep -oP "(?<=include )[^#]+$" "$f")
 
       include_level=$((include_level - 1))
     fi
