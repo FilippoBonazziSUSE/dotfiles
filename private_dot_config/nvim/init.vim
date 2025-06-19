@@ -157,10 +157,14 @@ set lbr
 
 " LSP config
 lua require('lspconfig').clangd.setup{}
-lua require('lspconfig').bashls.setup{}
-lua require('lspconfig').vimls.setup{}
+lua vim.lsp.enable('bashls')
+
+" vimls setup
+lua vim.lsp.enable('vimls')
+
 " Broken right now due to missing remark
 " lua require('lspconfig').remark_ls.setup{}
+
 " LSP mappings (the mappings used in the default file don't quite work right)
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
@@ -172,6 +176,7 @@ nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
 " PYLSP setup
+" zypper in python3-python-lsp-server
 lua require('lspconfig').pylsp.setup {settings = {pylsp = {plugins = {autopep8 = {enabled = false}, yapf = {enabled = true}}}}}
 
 " Treesitter setup
