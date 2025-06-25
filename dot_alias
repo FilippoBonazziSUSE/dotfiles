@@ -38,6 +38,10 @@ alias rpmo='rpm_open.py'
 # Nvim aliases
 alias nview='nvim -R'
 
+# Short aliases
+alias e='vim'
+alias v='view'
+
 # Vim aliases
 alias vim='nvim'
 alias view='nview'
