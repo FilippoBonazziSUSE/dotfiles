@@ -63,7 +63,6 @@ alias zrem='sudo zypper remove --clean-deps'
 alias zreff='zref --force'
 
 alias zrefn='sudo ZYPP_CURL2=1 zypper ref'
-alias zdupn='sudo ZYPP_PCK_PRELOAD=1 zypper dup'
 
 # VSCodium
 alias codium='flatpak run com.vscodium.codium --ozone-platform=wayland'
