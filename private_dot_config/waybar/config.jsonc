@@ -10,7 +10,7 @@
     "modules-right": ["tray", "custom/zypper", "custom/npm", "custom/flatpak", "custom/fwupd", "custom/scratchpad", "systemd-failed-units", "network#wifi", "network#wired", "network#VPN", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "pulseaudio", "privacy", "idle_inhibitor", "sway/language", "clock#date", "clock", "custom/notification"],
     "sway/mode": {
         "format": "{}",
-	"max-length": 80
+        "max-length": 80
     },
     "sway/workspaces": {
         "all-outputs": false,
@@ -87,9 +87,9 @@
     },
     "clock": {
         "format": "{:%H:%M:%S}",
-	"tooltip-format": "{:%Z (UTC %z)}",
+        "tooltip-format": "{:%Z (UTC %z)}",
         "tooltip": true,
-	"interval": 1
+        "interval": 1
     },
     "clock#date": {
         "format": "{:%F %a}",
@@ -121,13 +121,13 @@
             "medium": 50,
             "high": 75
         },
-	"on-click": "exec alacritty -e sh -c 'htop --sort-key=PERCENT_CPU'",
-	"interval": 1
+        "on-click": "exec alacritty -e sh -c 'htop --sort-key=PERCENT_CPU'",
+        "interval": 1
     },
     "memory": {
         "format": "{}% ",
-	"on-click": "exec alacritty -e sh -c 'htop --sort-key=PERCENT_MEM'",
-	"interval": 2
+        "on-click": "exec alacritty -e sh -c 'htop --sort-key=PERCENT_MEM'",
+        "interval": 2
     },
     "temperature": {
         // "thermal-zone": 0,
@@ -136,7 +136,7 @@
         // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""],
-	"interval": 2
+        "interval": 2
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -154,7 +154,7 @@
         "format-full": "{capacity}% ",
         "format-plugged": "",
         "format-icons": ["", "", "", "", ""],
-	"on-click-right": "exec alacritty -e sh -c 'echo PowerTOP requires root privileges; sudo powertop'",
+        "on-click-right": "exec alacritty -e sh -c 'echo PowerTOP requires root privileges; sudo powertop'",
         "interval": 3
     },
     "network#wifi": {
@@ -162,11 +162,11 @@
         "format-wifi": "",
         "format-linked": "",
         "format-disconnected": "",
-	"tooltip-format": "{essid} ({signalStrength}%) ({frequency} GHz)\n{ifname} {ipaddr}/{cidr}\nU: {bandwidthUpBytes} D: {bandwidthDownBytes}",
-	"tooltip-format-disconnected": "Airplane mode",
-	"on-click": "bash ~/.config/waybar/helpers/toggle_wifi.sh; pkill -SIGRTMIN+8 waybar",
-	"on-click-right": "exec alacritty -e sh -c 'nmtui'",
-	"interval": 5
+        "tooltip-format": "{essid} ({signalStrength}%) ({frequency} GHz)\n{ifname} {ipaddr}/{cidr}\nU: {bandwidthUpBytes} D: {bandwidthDownBytes}",
+        "tooltip-format-disconnected": "Airplane mode",
+        "on-click": "bash ~/.config/waybar/helpers/toggle_wifi.sh; pkill -SIGRTMIN+8 waybar",
+        "on-click-right": "exec alacritty -e sh -c 'nmtui'",
+        "interval": 5
     },
     "network#wired": {
         "interface": "enp*",
@@ -174,35 +174,35 @@
         "format-linked": "",
         "format-disconnected": "",
         "format-disabled": "",
-	"tooltip-format": "{ifname}\n{ipaddr}/{cidr}",
-	"on-click-right": "exec alacritty -e sh -c 'nmtui'"
+        "tooltip-format": "{ifname}\n{ipaddr}/{cidr}",
+        "on-click-right": "exec alacritty -e sh -c 'nmtui'"
     },
     "network#VPN": {
         "interface": "tun*",
         "format-ethernet": "",
         "format-linked": "",
         "format-disconnected": "",
-	"tooltip-format": "{ifname}\n{ipaddr}/{cidr}",
-	"tooltip-format-disconnected": "Disconnected",
-	"on-click": "bash ~/.config/waybar/helpers/toggle_vpn.sh; pkill -SIGRTMIN+8 waybar",
-	"on-click-right": "exec alacritty -e sh -c 'nmtui'",
-	"interval": 5
+        "tooltip-format": "{ifname}\n{ipaddr}/{cidr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "bash ~/.config/waybar/helpers/toggle_vpn.sh; pkill -SIGRTMIN+8 waybar",
+        "on-click-right": "exec alacritty -e sh -c 'nmtui'",
+        "interval": 5
     },
     "bluetooth": {
-	"format": "",
-	"format-disabled": "",
-	"format-off": "",
-	"format-connected": " {num_connections}",
-	// "format-connected": " {device_alias}",
-	"tooltip-format": "{controller_address} {status}\n\n{num_connections} connected",
-	"tooltip-format-disabled": "{status}",
-	"tooltip-format-connected": "{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
-	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
-	"on-click": "bluetoothctl power $(bluetoothctl show | grep -q 'Powered: yes' && echo off || echo on); pkill -SIGRTMIN+8 waybar",
-	"on-click-right": "exec alacritty -e sh -c 'bluetuith'"
+        "format": "",
+        "format-disabled": "",
+        "format-off": "",
+        "format-connected": " {num_connections}",
+        // "format-connected": " {device_alias}",
+        "tooltip-format": "{controller_address} {status}\n\n{num_connections} connected",
+        "tooltip-format-disabled": "{status}",
+        "tooltip-format-connected": "{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "on-click": "bluetoothctl power $(bluetoothctl show | grep -q 'Powered: yes' && echo off || echo on); pkill -SIGRTMIN+8 waybar",
+        "on-click-right": "exec alacritty -e sh -c 'bluetuith'"
     },
     "pulseaudio": {
         "format": "{volume}% {icon}",
@@ -224,9 +224,9 @@
         "tooltip": true
     },
     "sway/language": {
-	   "format": "{flag}",
-	   "tooltip-format": "{long}",
-	   "on-click": "exec swaymsg input $(bash ~/.config/waybar/helpers/sway_conf_get.sh laptop_keyboard) xkb_switch_layout next"
+           "format": "{flag}",
+           "tooltip-format": "{long}",
+           "on-click": "exec swaymsg input $(bash ~/.config/waybar/helpers/sway_conf_get.sh laptop_keyboard) xkb_switch_layout next"
     },
     "custom/scratchpad": {
         "format-text": "{}",
@@ -237,23 +237,23 @@
         "on-click-right": "swaymsg 'move scratchpad'"
     },
     "custom/notification": {
-	"tooltip": true,
-	"format": "{icon}",
-	"format-icons": {
-	     "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
-	     "none": " ",
-	     "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+        "tooltip": true,
+        "format": "{icon}",
+        "format-icons": {
+             "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+             "none": " ",
+             "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
              "dnd-none": " ",
              "inhibited-notification": "<span foreground='red'><small><sub><b>zz</b></sub></small></span>",
              "inhibited-none": "<span><small><sub><b>zz</b></sub></small></span>",
              "dnd-inhibited-notification": "<span foreground='red'><small><sub><b>zz</b></sub></small></span>",
              "dnd-inhibited-none": "<span><small><sub><b>zz</b></sub></small></span>"
         },
-	"return-type": "json",
-	"exec-if": "which swaync-client",
-	"exec": "swaync-client -swb",
-	"on-click": "swaync-client -t -sw",
-	"on-click-right": "swaync-client -d -sw",
-	"escape": true
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
    }
 }
