@@ -243,8 +243,12 @@
 	     "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
 	     "none": " ",
 	     "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
-	     "dnd-none": " "
-	},
+             "dnd-none": " ",
+             "inhibited-notification": "<span foreground='red'><small><sub><b>zz</b></sub></small></span>",
+             "inhibited-none": "<span><small><sub><b>zz</b></sub></small></span>",
+             "dnd-inhibited-notification": "<span foreground='red'><small><sub><b>zz</b></sub></small></span>",
+             "dnd-inhibited-none": "<span><small><sub><b>zz</b></sub></small></span>"
+        },
 	"return-type": "json",
 	"exec-if": "which swaync-client",
 	"exec": "swaync-client -swb",
