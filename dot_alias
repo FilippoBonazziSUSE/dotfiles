@@ -12,7 +12,7 @@ alias cp='cp -v'
 alias ln='ln -v'
 alias mv='mv -v'
 alias rm='rm -v'
-alias less='less -F'
+alias less='less -F --mouse'
 # Create directory named in the ISO 8601 format YYYYMMDDHHmm without separators
 alias mkdir_now='date +%Y%m%d%H%M | xargs mkdir'
 # Get week number
