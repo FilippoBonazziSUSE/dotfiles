@@ -1,0 +1,9 @@
+[Unit]
+Description=Power off Bluetooth by default
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bluetoothctl power off
+
+[Install]
+WantedBy=default.target
