@@ -88,12 +88,14 @@
     "clock": {
         "format": "{:%H:%M:%S}",
         "tooltip-format": "{:%Z (UTC %z)}",
+        "locale": "en_DK.UTF-8",
         "tooltip": true,
         "interval": 1
     },
     "clock#date": {
         "format": "{:%F %a}",
         "smooth-scrolling-threshold": 4,
+        "locale": "en_DK.UTF-8",
         "tooltip-format": "<span color='#35b9ab'><tt><small>{calendar}</small></tt></span>",
         "calendar": {
             "mode-mon-col"      : 4,
