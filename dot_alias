@@ -8,13 +8,15 @@ alias ls='ls --color=auto'
 alias bc='bc -l'
 alias lh='ls -lh'
 alias lha='ls -lha'
+alias lhat='ls -lhat --time-style=long-iso'
 alias cp='cp -v'
 alias ln='ln -v'
 alias mv='mv -v'
 alias rm='rm -v'
 alias less='less -F --mouse'
 # Create directory named in the ISO 8601 format YYYYMMDDHHmm without separators
-alias mkdir_now='date +%Y%m%d%H%M | xargs mkdir'
+alias mkdir_now='mkdir "$(date +%Y%m%d%H%M)"'
+alias mkcd_now='mkcd "$(date +%Y%m%d%H%M)"'
 # Get week number
 alias week='date +%V'
 
