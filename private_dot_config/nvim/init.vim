@@ -156,7 +156,7 @@ set wildmode=longest,list,full
 set lbr
 
 " LSP config
-lua require('lspconfig').clangd.setup{}
+lua vim.lsp.enable("clangd")
 lua vim.lsp.enable('bashls')
 
 " vimls setup
@@ -177,7 +177,7 @@ nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
 " PYLSP setup
 " zypper in python3-python-lsp-server
-lua require('lspconfig').pylsp.setup {settings = {pylsp = {plugins = {autopep8 = {enabled = false}, yapf = {enabled = true}}}}}
+lua vim.lsp.config("pylsp", {settings = {pylsp = {plugins = {autopep8 = {enabled = false}, yapf = {enabled = true}}}}})
 
 " Treesitter setup
 lua require("treesitter")
