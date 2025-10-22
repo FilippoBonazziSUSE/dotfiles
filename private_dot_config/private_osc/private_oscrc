@@ -35,7 +35,7 @@ build-type = kvm
 #build-initrd = /boot/initrd
 # build-memory is the amount of memory used in the VM
 # value in MB - e.g. 512
-build-memory = 8192
+build-memory = 16384
 # build-vmdisk-rootsize is the size of the disk-image used as root in a VM build
 # values in MB - e.g. 4096
 #build-vmdisk-rootsize = 4096
