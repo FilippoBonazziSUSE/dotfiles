@@ -218,5 +218,11 @@ augroup autoresize_splits
   autocmd VimResized * wincmd =
 augroup END
 
+" Reload file without prompting if file changed externally but not internally
+set autoread
+augroup reload_file
+  autocmd CursorHold * checktime
+augroup END
+
 " Show all whitespace with :set list
 set listchars=eol:¬,tab:-->,trail:~,extends:>,precedes:<,space:␣
