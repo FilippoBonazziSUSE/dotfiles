@@ -30,3 +30,5 @@ selinux
 SELinux
 openQA
 exploitability
+Flatpak
+rpmlint
