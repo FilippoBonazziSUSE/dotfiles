@@ -182,6 +182,9 @@ lua vim.lsp.config("pylsp", {settings = {pylsp = {plugins = {autopep8 = {enabled
 " Treesitter setup
 lua require("treesitter")
 
+" RPM spec language server
+lua require("rpm-spec-language-server")
+
 com! CheckHighlightUnderCursor echo {l,c,n ->
       \   'hi<'    . synIDattr(synID(l, c, 1), n)             . '> '
       \  .'trans<' . synIDattr(synID(l, c, 0), n)             . '> '
