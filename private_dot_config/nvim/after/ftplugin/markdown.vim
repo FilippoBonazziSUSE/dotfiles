@@ -1,5 +1,6 @@
 " Enable code block syntax highlighting
-let g:markdown_fenced_languages = ['c', 'cpp', 'python', 'sh', 'diff', 'json']
+" Superseded by treesitter markdown highlighting
+"let g:markdown_fenced_languages = ['c', 'cpp', 'python', 'sh', 'diff', 'json']
 
 " Limit text width to 80 characters in the general case
 set textwidth=80
