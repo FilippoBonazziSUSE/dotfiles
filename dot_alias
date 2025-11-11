@@ -57,6 +57,9 @@ alias vimd='vim (Dockerfile|Containerfile)'
 # cat alias
 alias cat='bat --plain --paging=never'
 
+# rpm alias
+alias rpm='rpm --pipe="less -F"'
+
 # quilt alias
 alias quilt='squilt'
 
