@@ -75,3 +75,7 @@ alias codium='flatpak run com.vscodium.codium --ozone-platform=wayland'
 
 # virsh alias
 alias svirsh='virsh -c qemu:///system'
+
+# Meld aliases
+## open a blank 2-file diff
+alias meld-blank='meld "@blank" "@blank"'
