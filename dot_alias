@@ -79,3 +79,7 @@ alias svirsh='virsh -c qemu:///system'
 # Meld aliases
 ## open a blank 2-file diff
 alias meld-blank='meld "@blank" "@blank"'
+
+# atool aliases
+## Secure unpack to named folder confined with bubblewrap
+alias saunpack='saunpack -D'
