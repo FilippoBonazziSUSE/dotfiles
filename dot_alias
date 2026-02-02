@@ -36,6 +36,7 @@ alias oscb='osc build --ccache --cpio-bulk-download --download-api-only'
 alias oscbl='oscb |& tee build.log'
 alias oscsh='TERM=xterm-256color osc shell'
 alias osco='osc_open.py'
+alias isco='osc_open.py -A https://api.suse.de'
 alias rpmo='rpm_open.py'
 
 # Nvim aliases
