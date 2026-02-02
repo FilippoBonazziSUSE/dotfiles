@@ -3,7 +3,7 @@
 
 set -euo pipefail
 
-num_updates=$(npm outdated -g | tail -n +2 | wc -l)
+num_updates=$(npm outdated -ga | tail -n +2 | wc -l)
 
 if [[ "$num_updates" -eq "0" ]]
 then
