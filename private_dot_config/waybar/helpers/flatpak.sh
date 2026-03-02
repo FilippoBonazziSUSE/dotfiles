@@ -5,7 +5,7 @@
 # minus the headings line. If no updates are present, the command output will
 # be empty.
 
-set -euo pipefail
+set -uo pipefail
 
 num_updates=$(flatpak remote-ls --updates --all | tail -n +1 | wc -l)
 
