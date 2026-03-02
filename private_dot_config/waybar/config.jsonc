@@ -39,24 +39,24 @@
         "interval": 300,
         "exec": "bash ~/.config/waybar/helpers/flatpak.sh",
         "exec-if": "command -v flatpak",
-        "on-click": "exec alacritty -e sh -c 'flatpak update; pkill -SIGRTMIN+8 waybar'",
-        "signal": 8
+        "on-click": "exec alacritty -e sh -c 'flatpak update; pkill -SIGRTMIN+9 waybar'",
+        "signal": 9
     },
     "custom/npm": {
         "format": "<span foreground='red'><small><sup>⬤</sup></small></span>",
         "interval": 300,
         "exec": "bash ~/.config/waybar/helpers/npm.sh",
         "exec-if": "command -v npm",
-        "on-click": "exec alacritty -e sh -c 'npm update -ga; pkill -SIGRTMIN+8 waybar'",
-        "signal": 8
+        "on-click": "exec alacritty -e sh -c 'npm update -ga; pkill -SIGRTMIN+10 waybar'",
+        "signal": 10
     },
     "custom/fwupd": {
         "format": "<span foreground='red'><small><sup>⬤</sup></small></span>",
         "interval": 3600,
         "exec": "bash ~/.config/waybar/helpers/fwupd.sh",
         "exec-if": "command -v fwupdmgr",
-        "on-click": "exec alacritty -e sh -c 'sudo fwupdmgr update; pkill -SIGRTMIN+8 waybar'",
-        "signal": 8
+        "on-click": "exec alacritty -e sh -c 'sudo fwupdmgr update; pkill -SIGRTMIN+11 waybar'",
+        "signal": 11
     },
     // Modules configuration
     //  "sway/workspaces": {
