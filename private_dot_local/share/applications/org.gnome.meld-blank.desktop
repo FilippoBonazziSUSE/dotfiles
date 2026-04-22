@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Meld-Blank
+GenericName=Blank Diff Viewer
+Comment=Compare two blank text files
+Keywords=diff;merge;
+Exec=meld "@blank" "@blank"
+Terminal=false
+Type=Application
+Icon=org.gnome.Meld
+MimeType=application/x-meld-comparison;
+StartupNotify=true
+Categories=GTK;Development;
