@@ -43,7 +43,6 @@ window#waybar.solo {
 #tray,
 #battery,
 #cpu,
-#memory,
 #network,
 #bluetooth,
 #pulseaudio,
@@ -83,6 +82,32 @@ window#waybar.solo {
 }
 
 #cpu.high {
+    color: rgba(238, 46, 36, 1);
+}
+
+#memory {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    min-height: 0;
+    font-size: 0;
+}
+
+#memory.warning {
+    margin: 0px 5px 0px 5px;
+    padding: inherit;
+    min-width: inherit;
+    min-height: inherit;
+    font-size: inherit;
+    color: rgba(255, 210, 4, 1);
+}
+
+#memory.critical {
+    margin: 0px 5px 0px 5px;
+    padding: inherit;
+    min-width: inherit;
+    min-height: inherit;
+    font-size: inherit;
     color: rgba(238, 46, 36, 1);
 }
 
