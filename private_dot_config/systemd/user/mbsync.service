@@ -1,8 +1,8 @@
 [Unit]
 Description=Mailbox synchronization service
-Requires=network-status@fbonazzi.SUSE-UDP-NUE-NM_setting.service
+Requires=network-status@fbonazzi.SUSE-UDP-NUE-NM_home.service
 Requires=secrets-status@-org-freedesktop-secrets-collection-Passwords.service
-After=network-status@fbonazzi.SUSE-UDP-NUE-NM_setting.service
+After=network-status@fbonazzi.SUSE-UDP-NUE-NM_home.service
 After=secrets-status@-org-freedesktop-secrets-collection-Passwords.service
 
 [Service]
