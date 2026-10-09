@@ -19,6 +19,7 @@ set fcc_attach                       # save attachments with the body
 set forward_format = "Fwd: %s"       # format of subject when forwarding
 set forward_decode                   # decode when forwarding
 set forward_quote                    # include message in forwards
+set date_format = "%F %H:%M (UTC %z)"
 set attribution = "On %d, %n wrote:" # format of quoting header
 set reply_to                         # reply to Reply to: field
 set reverse_name                     # reply as whomever it was to
@@ -65,7 +66,6 @@ set index_format="%4C %Z %<[d?%[Today      %R]&%[%F %R]> %-20.20F %?M?(#%03M)&(%
 # Don't show '-' on an unmodified mailbox
 set status_chars = " *%A"
 set status_format = "[%f (%l)] %?V?[𝑓=%V (%M)] ?[%s] [%r]%>─%?p? (%p ✍)?%?F? (%F ⚑)?%?d? (%d ♻)?%?t? (%t ☖)? %n/%m %P"
-#set date_format = "%d.%m.%Y %H:%M"
 set use_threads = threads
 set sort = last-date
 #set sort_aux = reverse-last-date-received
